@@ -24,9 +24,17 @@ export class HomeComponent {
   public getNamesTeams(){
     this.teamsService.getTeams()
     .subscribe(
-      (res:any) => {
-        this.teams = res.response;
-        console.log(this.teams)
+      (res: any) => {
+        const teamsData: any[] = res.response;
+        this.teams = teamsData.map((teams: any) => ({
+          id: teams.team.id,
+          name: teams.team.name,
+          country: teams.team.country,
+          founded: teams.team.founded,
+          national: teams.team.national,
+          logo: teams.team.logo
+        }));
+        console.log(this.teams);
       }
     )
   }
