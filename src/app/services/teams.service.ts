@@ -14,8 +14,6 @@ export class TeamsService {
     private httpClient: HttpClient,
   ) { }
 
-  teams: Team[] = []
-
   configUrl = 'https://v3.football.api-sports.io/teams?country=Italy';
 
  getTeams(): Observable<Team[]>{

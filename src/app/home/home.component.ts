@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { TeamsService } from '../services/teams.service';
+import { Team } from '../models/team';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,11 @@ import { TeamsService } from '../services/teams.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  teamsControl = new FormControl<Team | null >(null, Validators.required)
+  selectFormControl = new FormControl("", Validators.required)
+
+  teams: Team[] = []
 
   constructor(
     private teamsService: TeamsService,
@@ -17,7 +24,10 @@ export class HomeComponent {
   public getNamesTeams(){
     this.teamsService.getTeams()
     .subscribe(
-      console.log
+      (res:any) => {
+        this.teams = res.response;
+        console.log(this.teams)
+      }
     )
   }
 }
