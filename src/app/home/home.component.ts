@@ -44,6 +44,8 @@ export class HomeComponent {
     if (selectedTeam) {
       const teamId: number = selectedTeam.id;
       console.log('ID della squadra è: ' + teamId);
+        this.teamsService.getTeamDetails(teamId)
+        .subscribe()
     }
   }
 

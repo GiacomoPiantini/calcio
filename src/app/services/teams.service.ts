@@ -14,12 +14,19 @@ export class TeamsService {
     private httpClient: HttpClient,
   ) { }
 
-  configUrl = 'https://v3.football.api-sports.io/teams?country=Italy';
+  configUrl = 'https://v3.football.api-sports.io/teams?';
 
  getTeams(): Observable<Team[]>{
   console.log("Service teams");
   const headers = new HttpHeaders().set('x-apisports-key', this.apiKey);
   return this.httpClient
-  .get<Team[]>(this.configUrl, { headers })
+  .get<Team[]>(this.configUrl + "country=Italy", { headers })
+}
+
+getTeamDetails(id: number): Observable<Team>{
+  console.log("Service team details");
+  const headers = new HttpHeaders().set('x-apisports-key', this.apiKey);
+  return this.httpClient
+  .get<Team>(this.configUrl + "id=" + id, { headers })
 }
 }
