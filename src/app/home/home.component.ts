@@ -38,4 +38,13 @@ export class HomeComponent {
       }
     )
   }
+
+  teamDetails() {
+    const selectedTeam: Team | null = this.teamsControl.value;
+    if (selectedTeam) {
+      const teamId: number = selectedTeam.id;
+      console.log('ID della squadra è: ' + teamId);
+    }
+  }
+
 }

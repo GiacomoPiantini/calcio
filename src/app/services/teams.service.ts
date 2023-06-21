@@ -8,7 +8,7 @@ import { Observable, tap } from 'rxjs';
 })
 export class TeamsService {
 
-  private apiKey = 'b39aa925955845acb872e1ef297fbe1e';
+  private apiKey = 'f137b3c03886c6db19c618934315181f';
 
   constructor(
     private httpClient: HttpClient,
