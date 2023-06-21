@@ -12,18 +12,23 @@
 <!------------------>
 
 <!-----MAIN---------->
-<form>
-  <mat-form-field>
-    <mat-label>Squadra</mat-label>
-    <mat-select [formControl]="teamsControl" required>
-      <mat-option>--</mat-option>
-      <mat-option *ngFor="let team of teams" [value]="team">
-        {{ team.name }}
-      </mat-option>
-    </mat-select>
-    <mat-error *ngIf="teamsControl.hasError('required')">Scegli squadra</mat-error>
-  </mat-form-field>
+<div class="formBody">
+  <form class="selectStyle">
+    <mat-form-field>
+      <mat-label>Squadra</mat-label>
+      <mat-select [formControl]="teamsControl" required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let team of teams" [value]="team">
+          {{ team.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="teamsControl.hasError('required')">Scegli squadra</mat-error>
+    </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="teamDetails()">Cerca</button>
-</form>
+    <button mat-raised-button color="primary" (click)="teamDetails()" [routerLink]="['/home']" class="buttonStyle">Cerca</button>
+  </form>
+</div>
 <!------------->
+
+
+<app-team-details></app-team-details>

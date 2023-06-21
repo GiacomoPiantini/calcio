@@ -11,13 +11,15 @@ import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TeamDetailsComponent } from './team-details/team-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FormationComponent,
-    PlayerComponent
+    PlayerComponent,
+    TeamDetailsComponent
   ],
   imports: [
     BrowserModule,
