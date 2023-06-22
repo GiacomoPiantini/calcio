@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TeamDetailsComponent } from './team-details/team-details.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { TeamDetailsComponent } from './team-details/team-details.component';
     ReactiveFormsModule,
     NgFor,
     NgIf,
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
