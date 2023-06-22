@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TeamsService } from '../services/teams.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { TeamsService } from '../services/teams.service';
   styleUrls: ['./formation.component.scss']
 })
 export class FormationComponent {
+
+  @Input('currentIdTeam') currentIdTeam?: any; //prendiamo in imput dal componente home l'id della squadra
 
   formation: any[]=[];
 
@@ -18,7 +20,7 @@ export class FormationComponent {
 
 
   getPlayers(){
-    this.teamsService.getFormation().subscribe((p) => this.formation = p);
+    this.teamsService.getFormation(this.currentIdTeam).subscribe((p) => this.formation = p);
     console.log(this.formation);
 
   }

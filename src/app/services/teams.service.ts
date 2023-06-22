@@ -1,6 +1,7 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Team } from './../models/team';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Responce, Responce2, Team } from "../models/team";
+import { Responce } from "../models/team";
 import { Observable, of } from 'rxjs';
 
 @Injectable({
@@ -32,9 +33,8 @@ export class TeamsService {
     .get<Team>(this.configUrl + "id=" + id, { headers }) */
   };
 
-  getFormation():  Observable<any>{
-    return of(this.PLAYERSROMA.map((t) => t.player))
-
+  getFormation(currentIdTeam:number):  Observable<any>{
+    return of(this.PLAYERSTEAM.filter(t => t.parameters.team === currentIdTeam)) //sceglie la squadra
   }
 
 
@@ -9847,3166 +9847,8417 @@ export class TeamsService {
 
 //--------------PLAYERS---------
 
-  PLAYERSROMA: Responce2[]=[
+  PLAYERSTEAM: any[]=[
     {
-      "player": {
-          "id": 765,
-          "name": "A. Mirante",
-          "firstname": "Antonio",
-          "lastname": "Mirante",
-          "age": 40,
-          "birth": {
-              "date": "1983-07-08",
-              "place": "Castellamare di Stabia",
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": "193 cm",
-          "weight": "79 kg",
-          "injured": false,
-          "photo": "https://media-1.api-sports.io/football/players/765.png"
+      "get": "players",
+      "parameters": {
+          "team": "489",
+          "season": "2022"
       },
-      "statistics": [
+      "errors": [],
+      "results": 20,
+      "paging": {
+          "current": 1,
+          "total": 3
+      },
+      "response": [
           {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-3.api-sports.io/football/teams/489.png"
+              "player": {
+                  "id": 765,
+                  "name": "A. Mirante",
+                  "firstname": "Antonio",
+                  "lastname": "Mirante",
+                  "age": 40,
+                  "birth": {
+                      "date": "1983-07-08",
+                      "place": "Castellamare di Stabia",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": "193 cm",
+                  "weight": "79 kg",
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/765.png"
               },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-3.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-1.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 1,
-                  "lineups": 0,
-                  "minutes": 1,
-                  "number": null,
-                  "position": "Goalkeeper",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 1,
-                  "out": 0,
-                  "bench": 38
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 4,
-                  "key": null,
-                  "accuracy": 4
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": 0
-              }
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-3.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 1,
+                          "lineups": 0,
+                          "minutes": 1,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 0,
+                          "bench": 38
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 4,
+                          "key": null,
+                          "accuracy": 4
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 11
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 1
+                      }
+                  }
+              ]
           },
           {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
+              "player": {
+                  "id": 769,
+                  "name": "A. Florenzi",
+                  "firstname": "Alessandro",
+                  "lastname": "Florenzi",
+                  "age": 32,
+                  "birth": {
+                      "date": "1991-03-11",
+                      "place": "Roma",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": "173 cm",
+                  "weight": "67 kg",
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/769.png"
               },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-3.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 6,
+                          "lineups": 2,
+                          "minutes": 200,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.740000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 4,
+                          "out": 1,
+                          "bench": 12
+                      },
+                      "shots": {
+                          "total": 3,
+                          "on": 2
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 98,
+                          "key": 4,
+                          "accuracy": 14
+                      },
+                      "tackles": {
+                          "total": 5,
+                          "blocks": null,
+                          "interceptions": 4
+                      },
+                      "duels": {
+                          "total": 12,
+                          "won": 7
+                      },
+                      "dribbles": {
+                          "attempts": 1,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 1,
+                          "committed": 2
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 4
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-3.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 1265,
+                  "name": "Y. Adli",
+                  "firstname": "Yacine Zinedine",
+                  "lastname": "Adli",
+                  "age": 23,
+                  "birth": {
+                      "date": "2000-07-29",
+                      "place": "Vitry-sur-Seine",
+                      "country": "France"
+                  },
+                  "nationality": "France",
+                  "height": "186 cm",
+                  "weight": "73 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/1265.png"
               },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Goalkeeper",
-                  "rating": null,
-                  "captain": false
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 6,
+                          "lineups": 1,
+                          "minutes": 141,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": "6.566666",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 5,
+                          "out": 1,
+                          "bench": 37
+                      },
+                      "shots": {
+                          "total": 2,
+                          "on": 2
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 69,
+                          "key": 2,
+                          "accuracy": 7
+                      },
+                      "tackles": {
+                          "total": 6,
+                          "blocks": null,
+                          "interceptions": 1
+                      },
+                      "duels": {
+                          "total": 26,
+                          "won": 12
+                      },
+                      "dribbles": {
+                          "attempts": 6,
+                          "success": 4,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 1,
+                          "committed": 4
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-3.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 1627,
+                  "name": "D. Calabria",
+                  "firstname": "Davide",
+                  "lastname": "Calabria",
+                  "age": 27,
+                  "birth": {
+                      "date": "1996-12-06",
+                      "place": "Brescia",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": "177 cm",
+                  "weight": "70 kg",
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/1627.png"
               },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 11
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 25,
+                          "lineups": 21,
+                          "minutes": 1697,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.917391",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 4,
+                          "out": 11,
+                          "bench": 7
+                      },
+                      "shots": {
+                          "total": 12,
+                          "on": 2
+                      },
+                      "goals": {
+                          "total": 1,
+                          "conceded": 0,
+                          "assists": 4,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 1000,
+                          "key": 16,
+                          "accuracy": 37
+                      },
+                      "tackles": {
+                          "total": 69,
+                          "blocks": 7,
+                          "interceptions": 24
+                      },
+                      "duels": {
+                          "total": 161,
+                          "won": 98
+                      },
+                      "dribbles": {
+                          "attempts": 10,
+                          "success": 2,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 14,
+                          "committed": 15
+                      },
+                      "cards": {
+                          "yellow": 6,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 6,
+                          "lineups": 6,
+                          "minutes": 499,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.966666",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 2,
+                          "bench": 2
+                      },
+                      "shots": {
+                          "total": 3,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 260,
+                          "key": 2,
+                          "accuracy": 35
+                      },
+                      "tackles": {
+                          "total": 17,
+                          "blocks": 3,
+                          "interceptions": 15
+                      },
+                      "duels": {
+                          "total": 45,
+                          "won": 26
+                      },
+                      "dribbles": {
+                          "attempts": 4,
+                          "success": 2,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 4,
+                          "committed": 6
+                      },
+                      "cards": {
+                          "yellow": 2,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 3173,
+                  "name": "I. Bennacer",
+                  "firstname": "Ismaël",
+                  "lastname": "Bennacer",
+                  "age": 26,
+                  "birth": {
+                      "date": "1997-12-01",
+                      "place": "Arles",
+                      "country": "France"
+                  },
+                  "nationality": "Algeria",
+                  "height": "175 cm",
+                  "weight": "70 kg",
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/3173.png"
               },
-              "shots": {
-                  "total": null,
-                  "on": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 28,
+                          "lineups": 24,
+                          "minutes": 2013,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": "7.251851",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 4,
+                          "out": 11,
+                          "bench": 5
+                      },
+                      "shots": {
+                          "total": 12,
+                          "on": 3
+                      },
+                      "goals": {
+                          "total": 2,
+                          "conceded": 0,
+                          "assists": 2,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 1301,
+                          "key": 43,
+                          "accuracy": 42
+                      },
+                      "tackles": {
+                          "total": 61,
+                          "blocks": 7,
+                          "interceptions": 25
+                      },
+                      "duels": {
+                          "total": 240,
+                          "won": 133
+                      },
+                      "dribbles": {
+                          "attempts": 37,
+                          "success": 25,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 25,
+                          "committed": 36
+                      },
+                      "cards": {
+                          "yellow": 5,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-3.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 10,
+                          "lineups": 9,
+                          "minutes": 592,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": "6.840000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 8,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": 4,
+                          "on": 3
+                      },
+                      "goals": {
+                          "total": 1,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 335,
+                          "key": 4,
+                          "accuracy": 28
+                      },
+                      "tackles": {
+                          "total": 26,
+                          "blocks": null,
+                          "interceptions": 7
+                      },
+                      "duels": {
+                          "total": 108,
+                          "won": 57
+                      },
+                      "dribbles": {
+                          "attempts": 21,
+                          "success": 13,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 12,
+                          "committed": 11
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 19209,
+                  "name": "F. Tomori",
+                  "firstname": "Oluwafikayomi Oluwadamilola",
+                  "lastname": "Tomori",
+                  "age": 26,
+                  "birth": {
+                      "date": "1997-12-19",
+                      "place": "Calgary",
+                      "country": "Canada"
+                  },
+                  "nationality": "England",
+                  "height": "185 cm",
+                  "weight": "75 kg",
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/19209.png"
               },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 33,
+                          "lineups": 32,
+                          "minutes": 2765,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "7.156250",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 6,
+                          "bench": 2
+                      },
+                      "shots": {
+                          "total": 7,
+                          "on": 4
+                      },
+                      "goals": {
+                          "total": 1,
+                          "conceded": 0,
+                          "assists": 1,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 1803,
+                          "key": 7,
+                          "accuracy": 49
+                      },
+                      "tackles": {
+                          "total": 69,
+                          "blocks": 24,
+                          "interceptions": 29
+                      },
+                      "duels": {
+                          "total": 224,
+                          "won": 156
+                      },
+                      "dribbles": {
+                          "attempts": 3,
+                          "success": 2,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 25,
+                          "committed": 27
+                      },
+                      "cards": {
+                          "yellow": 5,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 10,
+                          "lineups": 10,
+                          "minutes": 828,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.600000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": 1,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 511,
+                          "key": 3,
+                          "accuracy": 44
+                      },
+                      "tackles": {
+                          "total": 22,
+                          "blocks": 8,
+                          "interceptions": 10
+                      },
+                      "duels": {
+                          "total": 65,
+                          "won": 33
+                      },
+                      "dribbles": {
+                          "attempts": 2,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 2,
+                          "committed": 14
+                      },
+                      "cards": {
+                          "yellow": 4,
+                          "yellowred": 0,
+                          "red": 1
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 21081,
+                  "name": "C. Tătărușanu",
+                  "firstname": "Anton Ciprian",
+                  "lastname": "Tătărușanu",
+                  "age": 37,
+                  "birth": {
+                      "date": "1986-02-09",
+                      "place": "București",
+                      "country": "Romania"
+                  },
+                  "nationality": "Romania",
+                  "height": "198 cm",
+                  "weight": "90 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/21081.png"
               },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 16,
+                          "lineups": 16,
+                          "minutes": 1440,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": "6.812500",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 22
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 22,
+                          "assists": 1,
+                          "saves": 41
+                      },
+                      "passes": {
+                          "total": 481,
+                          "key": 2,
+                          "accuracy": 22
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": 1
+                      },
+                      "duels": {
+                          "total": 5,
+                          "won": 4
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 3,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 5,
+                          "lineups": 5,
+                          "minutes": 450,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": "7.400000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 5,
+                          "assists": null,
+                          "saves": 20
+                      },
+                      "passes": {
+                          "total": 158,
+                          "key": null,
+                          "accuracy": 24
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": 3,
+                          "won": 3
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 1,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 51070,
+                  "name": "Z. Ibrahimović",
+                  "firstname": "Zlatan",
+                  "lastname": "Ibrahimović",
+                  "age": 42,
+                  "birth": {
+                      "date": "1981-10-03",
+                      "place": "Malmö",
+                      "country": "Sweden"
+                  },
+                  "nationality": "Sweden",
+                  "height": "195 cm",
+                  "weight": "95 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/51070.png"
               },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-3.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 4,
+                          "lineups": 1,
+                          "minutes": 144,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": "6.825000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 3,
+                          "out": 1,
+                          "bench": 6
+                      },
+                      "shots": {
+                          "total": 5,
+                          "on": 3
+                      },
+                      "goals": {
+                          "total": 1,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 51,
+                          "key": 1,
+                          "accuracy": 9
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": 1,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": 19,
+                          "won": 9
+                      },
+                      "dribbles": {
+                          "attempts": 2,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 1,
+                          "committed": 2
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 1,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 56473,
+                  "name": "M. Gabbia",
+                  "firstname": "Matteo",
+                  "lastname": "Gabbia",
+                  "age": 24,
+                  "birth": {
+                      "date": "1999-10-21",
+                      "place": "Busto Arsizio",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": "185 cm",
+                  "weight": "78 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/56473.png"
               },
-              "duels": {
-                  "total": null,
-                  "won": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 12,
+                          "lineups": 6,
+                          "minutes": 608,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.616666",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 6,
+                          "out": 1,
+                          "bench": 30
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 356,
+                          "key": null,
+                          "accuracy": 24
+                      },
+                      "tackles": {
+                          "total": 17,
+                          "blocks": 3,
+                          "interceptions": 5
+                      },
+                      "duels": {
+                          "total": 47,
+                          "won": 33
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 1,
+                          "committed": 8
+                      },
+                      "cards": {
+                          "yellow": 2,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 4,
+                          "lineups": 2,
+                          "minutes": 209,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "7.100000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 2,
+                          "out": 0,
+                          "bench": 10
+                      },
+                      "shots": {
+                          "total": 1,
+                          "on": 1
+                      },
+                      "goals": {
+                          "total": 1,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 105,
+                          "key": null,
+                          "accuracy": 23
+                      },
+                      "tackles": {
+                          "total": 3,
+                          "blocks": null,
+                          "interceptions": 3
+                      },
+                      "duels": {
+                          "total": 12,
+                          "won": 7
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 3,
+                          "committed": 5
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 81012,
+                  "name": "D. Vásquez",
+                  "firstname": "Devis Estiven",
+                  "lastname": "Vásquez Llach",
+                  "age": 25,
+                  "birth": {
+                      "date": "1998-05-12",
+                      "place": "Barranquilla",
+                      "country": "Colombia"
+                  },
+                  "nationality": "Colombia",
+                  "height": "195 cm",
+                  "weight": "93 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/81012.png"
               },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 6
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 162045,
+                  "name": "M. Lazetić",
+                  "firstname": "Marko",
+                  "lastname": "Lazetić",
+                  "age": 19,
+                  "birth": {
+                      "date": "2004-01-22",
+                      "place": "Belgrade",
+                      "country": "Serbia"
+                  },
+                  "nationality": "Serbia",
+                  "height": "190 cm",
+                  "weight": "80 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/162045.png"
               },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 1,
+                          "lineups": 0,
+                          "minutes": 7,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": "6.300000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 0,
+                          "bench": 5
+                      },
+                      "shots": {
+                          "total": 1,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 1,
+                          "key": null,
+                          "accuracy": 1
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": 3,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 297579,
+                  "name": "C. Traorè",
+                  "firstname": "Chaka",
+                  "lastname": "Traorè",
+                  "age": 18,
+                  "birth": {
+                      "date": "2004-12-23",
+                      "place": "Abengourou",
+                      "country": "Côte d'Ivoire"
+                  },
+                  "nationality": "Côte d'Ivoire",
+                  "height": "175 cm",
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/297579.png"
               },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-3.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": null,
+                          "name": "Club Friendlies",
+                          "country": null,
+                          "logo": null,
+                          "flag": null,
+                          "season": "2022"
+                      },
+                      "games": {
+                          "appearences": 1,
+                          "lineups": 0,
+                          "minutes": 28,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 0,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 325143,
+                  "name": "G. Robotti",
+                  "firstname": "Giovanni",
+                  "lastname": "Robotti",
+                  "age": 20,
+                  "birth": {
+                      "date": "2002-01-30",
+                      "place": "Varese",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/325143.png"
               },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": 1
-              }
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": null,
+                          "name": "Club Friendlies",
+                          "country": null,
+                          "logo": null,
+                          "flag": null,
+                          "season": "2022"
+                      },
+                      "games": {
+                          "appearences": 1,
+                          "lineups": 0,
+                          "minutes": 8,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 0,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 336609,
+                  "name": "A. Bozzolan",
+                  "firstname": "Andrea",
+                  "lastname": "Bozzolan",
+                  "age": 19,
+                  "birth": {
+                      "date": "2004-02-23",
+                      "place": null,
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": "178 cm",
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/336609.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 4
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 336687,
+                  "name": "A. Coubiș",
+                  "firstname": "Andrei",
+                  "lastname": "Coubiș",
+                  "age": 20,
+                  "birth": {
+                      "date": "2003-09-29",
+                      "place": null,
+                      "country": "Italy"
+                  },
+                  "nationality": "Romania",
+                  "height": "189 cm",
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/336687.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 3
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 336689,
+                  "name": "Y. El Hilali",
+                  "firstname": "Youns Gabriele",
+                  "lastname": "El Hilali",
+                  "age": 19,
+                  "birth": {
+                      "date": "2003-06-08",
+                      "place": "Milan",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/336689.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": null,
+                          "name": "Club Friendlies",
+                          "country": null,
+                          "logo": null,
+                          "flag": null,
+                          "season": "2022"
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 342995,
+                  "name": "L. Nava",
+                  "firstname": "Lapo Francesco Maria",
+                  "lastname": "Nava",
+                  "age": 19,
+                  "birth": {
+                      "date": "2004-01-22",
+                      "place": "Milano",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/342995.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 2
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-3.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 2,
+                          "name": "UEFA Champions League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 4
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 371910,
+                  "name": "J. Šimić",
+                  "firstname": "Jan-Carlo",
+                  "lastname": "Šimić",
+                  "age": 18,
+                  "birth": {
+                      "date": "2005-05-02",
+                      "place": null,
+                      "country": "Germany"
+                  },
+                  "nationality": "Serbia",
+                  "height": "186 cm",
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/371910.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-1.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 374359,
+                  "name": "D. Bartesaghi",
+                  "firstname": "Davide",
+                  "lastname": "Bartesaghi",
+                  "age": 17,
+                  "birth": {
+                      "date": "2005-12-29",
+                      "place": null,
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/374359.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-3.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": null,
+                          "name": "Club Friendlies",
+                          "country": null,
+                          "logo": null,
+                          "flag": null,
+                          "season": "2022"
+                      },
+                      "games": {
+                          "appearences": 1,
+                          "lineups": 0,
+                          "minutes": 8,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 0,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 384423,
+                  "name": "A. Bakoune",
+                  "firstname": "Adam",
+                  "lastname": "Bakoune",
+                  "age": 17,
+                  "birth": {
+                      "date": "2006-02-06",
+                      "place": null,
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/384423.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 489,
+                          "name": "AC Milan",
+                          "logo": "https://media-2.api-sports.io/football/teams/489.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
           }
       ]
-  },
-  {
-      "player": {
-          "id": 769,
-          "name": "A. Florenzi",
-          "firstname": "Alessandro",
-          "lastname": "Florenzi",
-          "age": 32,
-          "birth": {
-              "date": "1991-03-11",
-              "place": "Roma",
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": "173 cm",
-          "weight": "67 kg",
-          "injured": false,
-          "photo": "https://media-2.api-sports.io/football/players/769.png"
+    },
+    {
+    "get": "players",
+    "parameters": {
+        "team": "488",
+        "season": "2022"
+    },
+    "errors": [],
+    "results": 20,
+    "paging": {
+        "current": 1,
+        "total": 3
+    },
+    "response": [
+        {
+            "player": {
+                "id": 1719,
+                "name": "M. Müldür",
+                "firstname": "Mert",
+                "lastname": "Müldür",
+                "age": 24,
+                "birth": {
+                    "date": "1999-04-03",
+                    "place": "Wien",
+                    "country": "Austria"
+                },
+                "nationality": "Türkiye",
+                "height": "188 cm",
+                "weight": "74 kg",
+                "injured": false,
+                "photo": "https://media-1.api-sports.io/football/players/1719.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-1.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 2,
+                        "lineups": 1,
+                        "minutes": 13,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "6.300000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 1,
+                        "bench": 7
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 3,
+                        "key": null,
+                        "accuracy": 1
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": 1,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": 1
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 25448,
+                "name": "K. Ayhan",
+                "firstname": "Kaan",
+                "lastname": "Ayhan",
+                "age": 29,
+                "birth": {
+                    "date": "1994-11-10",
+                    "place": "Gelsenkirchen",
+                    "country": "Germany"
+                },
+                "nationality": "Türkiye",
+                "height": "184 cm",
+                "weight": "84 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/25448.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-2.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-1.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 10,
+                        "lineups": 5,
+                        "minutes": 540,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "6.644444",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 5,
+                        "out": 0,
+                        "bench": 13
+                    },
+                    "shots": {
+                        "total": 1,
+                        "on": 1
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 329,
+                        "key": null,
+                        "accuracy": 31
+                    },
+                    "tackles": {
+                        "total": 10,
+                        "blocks": 4,
+                        "interceptions": 5
+                    },
+                    "duels": {
+                        "total": 32,
+                        "won": 20
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 8,
+                        "committed": 4
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 26828,
+                "name": "G. Kiriakopoulos",
+                "firstname": "Giorgos",
+                "lastname": "Kiriakopoulos",
+                "age": 27,
+                "birth": {
+                    "date": "1996-02-05",
+                    "place": "Patras",
+                    "country": "Greece"
+                },
+                "nationality": "Greece",
+                "height": "178 cm",
+                "weight": "74 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/26828.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-3.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 12,
+                        "lineups": 9,
+                        "minutes": 772,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "6.716666",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 3,
+                        "out": 8,
+                        "bench": 11
+                    },
+                    "shots": {
+                        "total": 4,
+                        "on": 3
+                    },
+                    "goals": {
+                        "total": 1,
+                        "conceded": 0,
+                        "assists": 2,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 336,
+                        "key": 9,
+                        "accuracy": 25
+                    },
+                    "tackles": {
+                        "total": 13,
+                        "blocks": 2,
+                        "interceptions": 4
+                    },
+                    "duels": {
+                        "total": 85,
+                        "won": 41
+                    },
+                    "dribbles": {
+                        "attempts": 15,
+                        "success": 11,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 12,
+                        "committed": 9
+                    },
+                    "cards": {
+                        "yellow": 3,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30516,
+                "name": "A. Consigli",
+                "firstname": "Andrea",
+                "lastname": "Consigli",
+                "age": 36,
+                "birth": {
+                    "date": "1987-01-27",
+                    "place": "Milano",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "189 cm",
+                "weight": "82 kg",
+                "injured": false,
+                "photo": "https://media-2.api-sports.io/football/players/30516.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-3.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-1.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 35,
+                        "lineups": 35,
+                        "minutes": 3150,
+                        "number": null,
+                        "position": "Goalkeeper",
+                        "rating": "6.554285",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 55,
+                        "assists": null,
+                        "saves": 64
+                    },
+                    "passes": {
+                        "total": 1238,
+                        "key": null,
+                        "accuracy": 27
+                    },
+                    "tackles": {
+                        "total": 1,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": 16,
+                        "won": 14
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 4,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": 0
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30517,
+                "name": "G. Pegolo",
+                "firstname": "Gianluca",
+                "lastname": "Pegolo",
+                "age": 42,
+                "birth": {
+                    "date": "1981-03-25",
+                    "place": "Bassano del Grappa",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "184 cm",
+                "weight": "76 kg",
+                "injured": false,
+                "photo": "https://media-2.api-sports.io/football/players/30517.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-1.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-1.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 2,
+                        "lineups": 2,
+                        "minutes": 180,
+                        "number": null,
+                        "position": "Goalkeeper",
+                        "rating": "6.500000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 36
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 3,
+                        "assists": null,
+                        "saves": 3
+                    },
+                    "passes": {
+                        "total": 67,
+                        "key": null,
+                        "accuracy": 27
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": 2,
+                        "won": 1
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 1,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": 0
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30523,
+                "name": "G. Ferrari",
+                "firstname": "Gian Marco",
+                "lastname": "Ferrari",
+                "age": 31,
+                "birth": {
+                    "date": "1992-05-15",
+                    "place": "Parma",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "189 cm",
+                "weight": "82 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/30523.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-1.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 33,
+                        "lineups": 24,
+                        "minutes": 2218,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "6.696774",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 9,
+                        "out": 3,
+                        "bench": 13
+                    },
+                    "shots": {
+                        "total": 7,
+                        "on": 1
+                    },
+                    "goals": {
+                        "total": 1,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 1279,
+                        "key": 4,
+                        "accuracy": 35
+                    },
+                    "tackles": {
+                        "total": 23,
+                        "blocks": 20,
+                        "interceptions": 23
+                    },
+                    "duels": {
+                        "total": 158,
+                        "won": 101
+                    },
+                    "dribbles": {
+                        "attempts": 1,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 31,
+                        "committed": 24
+                    },
+                    "cards": {
+                        "yellow": 5,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30527,
+                "name": "Rogério",
+                "firstname": "Rogério",
+                "lastname": "Oliveira da Silva",
+                "age": 25,
+                "birth": {
+                    "date": "1998-01-13",
+                    "place": "Nobres",
+                    "country": "Brazil"
+                },
+                "nationality": "Brazil",
+                "height": "178 cm",
+                "weight": "70 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/30527.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-1.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 36,
+                        "lineups": 34,
+                        "minutes": 2999,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "6.800000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 4,
+                        "bench": 3
+                    },
+                    "shots": {
+                        "total": 10,
+                        "on": 5
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": 3,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 1588,
+                        "key": 30,
+                        "accuracy": 36
+                    },
+                    "tackles": {
+                        "total": 36,
+                        "blocks": 9,
+                        "interceptions": 37
+                    },
+                    "duels": {
+                        "total": 214,
+                        "won": 117
+                    },
+                    "dribbles": {
+                        "attempts": 33,
+                        "success": 22,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 38,
+                        "committed": 30
+                    },
+                    "cards": {
+                        "yellow": 5,
+                        "yellowred": 0,
+                        "red": 1
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30528,
+                "name": "Federico Peluso",
+                "firstname": "Federico",
+                "lastname": "Peluso",
+                "age": 38,
+                "birth": {
+                    "date": "1984-01-20",
+                    "place": "Roma",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "187 cm",
+                "weight": "82 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/30528.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-1.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": null,
+                        "lineups": null,
+                        "minutes": null,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": null,
+                        "out": null,
+                        "bench": null
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": null,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": null,
+                        "yellowred": null,
+                        "red": null
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30534,
+                "name": "Francesco Magnanelli",
+                "firstname": "Francesco",
+                "lastname": "Magnanelli",
+                "age": 38,
+                "birth": {
+                    "date": "1984-11-12",
+                    "place": "Umbertide",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "181 cm",
+                "weight": "79 kg",
+                "injured": false,
+                "photo": "https://media-2.api-sports.io/football/players/30534.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-1.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": null,
+                        "lineups": null,
+                        "minutes": null,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": null,
+                        "out": null,
+                        "bench": null
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": null,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": null,
+                        "yellowred": null,
+                        "red": null
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30543,
+                "name": "G. Raspadori",
+                "firstname": "Giacomo",
+                "lastname": "Raspadori",
+                "age": 23,
+                "birth": {
+                    "date": "2000-02-18",
+                    "place": "Bentivoglio",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "172 cm",
+                "weight": "69 kg",
+                "injured": false,
+                "photo": "https://media-2.api-sports.io/football/players/30543.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-2.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-1.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 0,
+                        "minutes": 44,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.808333",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 1,
+                        "out": 0,
+                        "bench": 1
+                    },
+                    "shots": {
+                        "total": 26,
+                        "on": 16
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": 2,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 400,
+                        "key": 17,
+                        "accuracy": 13
+                    },
+                    "tackles": {
+                        "total": 9,
+                        "blocks": null,
+                        "interceptions": 3
+                    },
+                    "duels": {
+                        "total": 73,
+                        "won": 31
+                    },
+                    "dribbles": {
+                        "attempts": 18,
+                        "success": 8,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 11,
+                        "committed": 7
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30556,
+                "name": "F. Romagna",
+                "firstname": "Filippo",
+                "lastname": "Romagna",
+                "age": 26,
+                "birth": {
+                    "date": "1997-05-26",
+                    "place": "Fano",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "186 cm",
+                "weight": "75 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/30556.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-1.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 2,
+                        "lineups": 0,
+                        "minutes": 44,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "6.300000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 0,
+                        "bench": 19
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 36,
+                        "key": null,
+                        "accuracy": 17
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": 1,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": 2,
+                        "won": 2
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30766,
+                "name": "A. Russo",
+                "firstname": "Alessandro",
+                "lastname": "Russo",
+                "age": 22,
+                "birth": {
+                    "date": "2001-03-31",
+                    "place": "Reggio Calabria",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "196 cm",
+                "weight": null,
+                "injured": false,
+                "photo": "https://media-1.api-sports.io/football/players/30766.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-2.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 1,
+                        "lineups": 1,
+                        "minutes": 90,
+                        "number": null,
+                        "position": "Goalkeeper",
+                        "rating": "6.000000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 33
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 3,
+                        "assists": null,
+                        "saves": 4
+                    },
+                    "passes": {
+                        "total": 48,
+                        "key": null,
+                        "accuracy": 35
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": 1,
+                        "won": 1
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": 1,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": 0
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 30981,
+                "name": "R. Marchizza",
+                "firstname": "Riccardo",
+                "lastname": "Marchizza",
+                "age": 25,
+                "birth": {
+                    "date": "1998-03-26",
+                    "place": "Roma",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "185 cm",
+                "weight": "80 kg",
+                "injured": false,
+                "photo": "https://media-1.api-sports.io/football/players/30981.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-2.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 10,
+                        "lineups": 3,
+                        "minutes": 279,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "6.360000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 7,
+                        "out": 3,
+                        "bench": 35
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": 1,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 138,
+                        "key": 3,
+                        "accuracy": 11
+                    },
+                    "tackles": {
+                        "total": 2,
+                        "blocks": null,
+                        "interceptions": 2
+                    },
+                    "duels": {
+                        "total": 24,
+                        "won": 8
+                    },
+                    "dribbles": {
+                        "attempts": 5,
+                        "success": 1,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": 7
+                    },
+                    "cards": {
+                        "yellow": 1,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 128461,
+                "name": "N. Zortea",
+                "firstname": "Nadir",
+                "lastname": "Zortea",
+                "age": 24,
+                "birth": {
+                    "date": "1999-06-19",
+                    "place": "Feltre",
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "175 cm",
+                "weight": "70 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/128461.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-2.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 10,
+                        "lineups": 7,
+                        "minutes": 655,
+                        "number": null,
+                        "position": "Defender",
+                        "rating": "6.885714",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 3,
+                        "out": 1,
+                        "bench": 9
+                    },
+                    "shots": {
+                        "total": 3,
+                        "on": 3
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 73,
+                        "key": 3,
+                        "accuracy": 6
+                    },
+                    "tackles": {
+                        "total": 10,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": 43,
+                        "won": 25
+                    },
+                    "dribbles": {
+                        "attempts": 20,
+                        "success": 10,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": 4
+                    },
+                    "cards": {
+                        "yellow": 4,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 180584,
+                "name": "B. Oddei",
+                "firstname": "Brian Safo",
+                "lastname": "Oddei",
+                "age": 21,
+                "birth": {
+                    "date": "2002-09-18",
+                    "place": null,
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": null,
+                "weight": null,
+                "injured": false,
+                "photo": "https://media-1.api-sports.io/football/players/180584.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-3.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 0,
+                        "lineups": 0,
+                        "minutes": 0,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 0
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 193870,
+                "name": "J. Antiste",
+                "firstname": "Janis",
+                "lastname": "Antiste",
+                "age": 21,
+                "birth": {
+                    "date": "2002-08-18",
+                    "place": "Toulouse",
+                    "country": "France"
+                },
+                "nationality": "France",
+                "height": "183 cm",
+                "weight": "75 kg",
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/193870.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-2.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 2,
+                        "lineups": 0,
+                        "minutes": 50,
+                        "number": null,
+                        "position": "Attacker",
+                        "rating": "6.800000",
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 2,
+                        "out": 0,
+                        "bench": 15
+                    },
+                    "shots": {
+                        "total": 1,
+                        "on": 1
+                    },
+                    "goals": {
+                        "total": 1,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": 18,
+                        "key": null,
+                        "accuracy": 6
+                    },
+                    "tackles": {
+                        "total": 1,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": 9,
+                        "won": 3
+                    },
+                    "dribbles": {
+                        "attempts": 1,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": 4
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 292519,
+                "name": "G. Zacchi",
+                "firstname": "Gioele",
+                "lastname": "Zacchi",
+                "age": 20,
+                "birth": {
+                    "date": "2003-07-10",
+                    "place": null,
+                    "country": "Italy"
+                },
+                "nationality": "Italy",
+                "height": "178 cm",
+                "weight": null,
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/292519.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-3.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": 0,
+                        "lineups": 0,
+                        "minutes": 0,
+                        "number": null,
+                        "position": "Goalkeeper",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": 0,
+                        "out": 0,
+                        "bench": 6
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": 0,
+                        "conceded": 0,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": 0,
+                        "yellowred": 0,
+                        "red": 0
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": 0,
+                        "missed": 0,
+                        "saved": 0
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 341991,
+                "name": "A. Mata",
+                "firstname": "Asan",
+                "lastname": "Mata",
+                "age": 19,
+                "birth": {
+                    "date": "2003-08-18",
+                    "place": null,
+                    "country": "Albania"
+                },
+                "nationality": "Albania",
+                "height": null,
+                "weight": null,
+                "injured": false,
+                "photo": "https://media-2.api-sports.io/football/players/341991.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-2.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-2.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": null,
+                        "lineups": null,
+                        "minutes": null,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": null,
+                        "out": null,
+                        "bench": null
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": null,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": null,
+                        "yellowred": null,
+                        "red": null
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 341994,
+                "name": "S. Abubakar",
+                "firstname": "Salim",
+                "lastname": "Abubakar",
+                "age": 19,
+                "birth": {
+                    "date": "2003-04-06",
+                    "place": null,
+                    "country": "Ghana"
+                },
+                "nationality": "Ghana",
+                "height": null,
+                "weight": null,
+                "injured": false,
+                "photo": "https://media-2.api-sports.io/football/players/341994.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-2.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-1.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": null,
+                        "lineups": null,
+                        "minutes": null,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": null,
+                        "out": null,
+                        "bench": null
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": null,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": null,
+                        "yellowred": null,
+                        "red": null
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        },
+        {
+            "player": {
+                "id": 341995,
+                "name": "J. Kumi",
+                "firstname": "Justin",
+                "lastname": "Kumi",
+                "age": 18,
+                "birth": {
+                    "date": "2004-07-16",
+                    "place": null,
+                    "country": "Ghana"
+                },
+                "nationality": "Italy",
+                "height": null,
+                "weight": null,
+                "injured": false,
+                "photo": "https://media-3.api-sports.io/football/players/341995.png"
+            },
+            "statistics": [
+                {
+                    "team": {
+                        "id": 488,
+                        "name": "Sassuolo",
+                        "logo": "https://media-3.api-sports.io/football/teams/488.png"
+                    },
+                    "league": {
+                        "id": 135,
+                        "name": "Serie A",
+                        "country": "Italy",
+                        "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                        "flag": "https://media-3.api-sports.io/flags/it.svg",
+                        "season": 2022
+                    },
+                    "games": {
+                        "appearences": null,
+                        "lineups": null,
+                        "minutes": null,
+                        "number": null,
+                        "position": "Midfielder",
+                        "rating": null,
+                        "captain": false
+                    },
+                    "substitutes": {
+                        "in": null,
+                        "out": null,
+                        "bench": null
+                    },
+                    "shots": {
+                        "total": null,
+                        "on": null
+                    },
+                    "goals": {
+                        "total": null,
+                        "conceded": null,
+                        "assists": null,
+                        "saves": null
+                    },
+                    "passes": {
+                        "total": null,
+                        "key": null,
+                        "accuracy": null
+                    },
+                    "tackles": {
+                        "total": null,
+                        "blocks": null,
+                        "interceptions": null
+                    },
+                    "duels": {
+                        "total": null,
+                        "won": null
+                    },
+                    "dribbles": {
+                        "attempts": null,
+                        "success": null,
+                        "past": null
+                    },
+                    "fouls": {
+                        "drawn": null,
+                        "committed": null
+                    },
+                    "cards": {
+                        "yellow": null,
+                        "yellowred": null,
+                        "red": null
+                    },
+                    "penalty": {
+                        "won": null,
+                        "commited": null,
+                        "scored": null,
+                        "missed": null,
+                        "saved": null
+                    }
+                }
+            ]
+        }
+    ]
+    },
+    {
+      "get": "players",
+      "parameters": {
+          "team": "497",
+          "season": "2022"
       },
-      "statistics": [
+      "errors": [],
+      "results": 20,
+      "paging": {
+          "current": 1,
+          "total": 3
+      },
+      "response": [
           {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
+              "player": {
+                  "id": 324,
+                  "name": "A. Diawara",
+                  "firstname": "Amadou",
+                  "lastname": "Diawara",
+                  "age": 26,
+                  "birth": {
+                      "date": "1997-07-17",
+                      "place": "Conakry",
+                      "country": "Guinea"
+                  },
+                  "nationality": "Guinea",
+                  "height": "183 cm",
+                  "weight": "75 kg",
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/324.png"
               },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-1.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-2.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 6,
-                  "lineups": 2,
-                  "minutes": 200,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": "6.740000",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 4,
-                  "out": 1,
-                  "bench": 12
-              },
-              "shots": {
-                  "total": 3,
-                  "on": 2
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 98,
-                  "key": 4,
-                  "accuracy": 14
-              },
-              "tackles": {
-                  "total": 5,
-                  "blocks": null,
-                  "interceptions": 4
-              },
-              "duels": {
-                  "total": 12,
-                  "won": 7
-              },
-              "dribbles": {
-                  "attempts": 1,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 1,
-                  "committed": 2
-              },
-              "cards": {
-                  "yellow": 1,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-1.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
           },
           {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
+              "player": {
+                  "id": 556,
+                  "name": "M. Svilar",
+                  "firstname": "Mile",
+                  "lastname": "Svilar",
+                  "age": 24,
+                  "birth": {
+                      "date": "1999-08-27",
+                      "place": "Antwerpen",
+                      "country": "Belgium"
+                  },
+                  "nationality": "Serbia",
+                  "height": "189 cm",
+                  "weight": "77 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/556.png"
               },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-2.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 4
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 3,
+                          "lineups": 3,
+                          "minutes": 270,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": "6.600000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 35
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 3,
+                          "assists": null,
+                          "saves": 7
+                      },
+                      "passes": {
+                          "total": 64,
+                          "key": null,
+                          "accuracy": 12
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 1
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 1,
+                          "lineups": 1,
+                          "minutes": 90,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": "6.200000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 14
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 2,
+                          "assists": null,
+                          "saves": 1
+                      },
+                      "passes": {
+                          "total": 22,
+                          "key": null,
+                          "accuracy": 17
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  }
+              ]
           },
           {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-3.api-sports.io/football/teams/489.png"
+              "player": {
+                  "id": 770,
+                  "name": "R. Karsdorp",
+                  "firstname": "Rick",
+                  "lastname": "Karsdorp",
+                  "age": 28,
+                  "birth": {
+                      "date": "1995-02-11",
+                      "place": "Schoonhoven",
+                      "country": "Netherlands"
+                  },
+                  "nationality": "Netherlands",
+                  "height": "184 cm",
+                  "weight": "80 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/770.png"
               },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-2.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 13,
+                          "lineups": 8,
+                          "minutes": 712,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.615384",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 5,
+                          "out": 6,
+                          "bench": 8
+                      },
+                      "shots": {
+                          "total": 2,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 296,
+                          "key": 6,
+                          "accuracy": 19
+                      },
+                      "tackles": {
+                          "total": 21,
+                          "blocks": null,
+                          "interceptions": 7
+                      },
+                      "duels": {
+                          "total": 52,
+                          "won": 26
+                      },
+                      "dribbles": {
+                          "attempts": 5,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": 4
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-1.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 5,
+                          "lineups": 4,
+                          "minutes": 276,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.680000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 2,
+                          "bench": 6
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 101,
+                          "key": 6,
+                          "accuracy": 15
+                      },
+                      "tackles": {
+                          "total": 2,
+                          "blocks": null,
+                          "interceptions": 1
+                      },
+                      "duels": {
+                          "total": 13,
+                          "won": 10
+                      },
+                      "dribbles": {
+                          "attempts": 3,
+                          "success": 3,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 3,
+                          "committed": 2
+                      },
+                      "cards": {
+                          "yellow": 2,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 775,
+                  "name": "D. Santon",
+                  "firstname": "Davide",
+                  "lastname": "Santon",
+                  "age": 31,
+                  "birth": {
+                      "date": "1991-01-02",
+                      "place": "Porto Maggiore",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": "187 cm",
+                  "weight": "77 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/775.png"
               },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": null,
-                  "captain": false
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": null,
+                          "name": "Club Friendlies",
+                          "country": null,
+                          "logo": null,
+                          "flag": null,
+                          "season": "2022"
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 777,
+                  "name": "A. Ćorić",
+                  "firstname": "Ante",
+                  "lastname": "Ćorić",
+                  "age": 26,
+                  "birth": {
+                      "date": "1997-04-14",
+                      "place": "Zagreb",
+                      "country": "Croatia"
+                  },
+                  "nationality": "Croatia",
+                  "height": "172 cm",
+                  "weight": "68 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/777.png"
               },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 0
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 786,
+                  "name": "N. Zaniolo",
+                  "firstname": "Nicolò",
+                  "lastname": "Zaniolo",
+                  "age": 24,
+                  "birth": {
+                      "date": "1999-07-02",
+                      "place": "Massa",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": "190 cm",
+                  "weight": "79 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/786.png"
               },
-              "shots": {
-                  "total": null,
-                  "on": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 13,
+                          "lineups": 12,
+                          "minutes": 898,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": "6.484615",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 8,
+                          "bench": 2
+                      },
+                      "shots": {
+                          "total": 20,
+                          "on": 7
+                      },
+                      "goals": {
+                          "total": 1,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 174,
+                          "key": 8,
+                          "accuracy": 9
+                      },
+                      "tackles": {
+                          "total": 8,
+                          "blocks": null,
+                          "interceptions": 2
+                      },
+                      "duels": {
+                          "total": 149,
+                          "won": 54
+                      },
+                      "dribbles": {
+                          "attempts": 38,
+                          "success": 9,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 32,
+                          "committed": 22
+                      },
+                      "cards": {
+                          "yellow": 4,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-1.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 3,
+                          "lineups": 2,
+                          "minutes": 210,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": "7.166666",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 1,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": 12,
+                          "on": 6
+                      },
+                      "goals": {
+                          "total": 1,
+                          "conceded": 0,
+                          "assists": 1,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 44,
+                          "key": 3,
+                          "accuracy": 10
+                      },
+                      "tackles": {
+                          "total": 1,
+                          "blocks": null,
+                          "interceptions": 1
+                      },
+                      "duels": {
+                          "total": 30,
+                          "won": 13
+                      },
+                      "dribbles": {
+                          "attempts": 13,
+                          "success": 5,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 7,
+                          "committed": 4
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 1
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 892,
+                  "name": "C. Smalling",
+                  "firstname": "Christopher Lloyd",
+                  "lastname": "Smalling",
+                  "age": 34,
+                  "birth": {
+                      "date": "1989-11-22",
+                      "place": "Greenwich",
+                      "country": "England"
+                  },
+                  "nationality": "England",
+                  "height": "194 cm",
+                  "weight": "81 kg",
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/892.png"
               },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 32,
+                          "lineups": 31,
+                          "minutes": 2808,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "7.115625",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 1,
+                          "bench": 3
+                      },
+                      "shots": {
+                          "total": 13,
+                          "on": 5
+                      },
+                      "goals": {
+                          "total": 3,
+                          "conceded": 0,
+                          "assists": 1,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 1339,
+                          "key": 6,
+                          "accuracy": 36
+                      },
+                      "tackles": {
+                          "total": 26,
+                          "blocks": 36,
+                          "interceptions": 43
+                      },
+                      "duels": {
+                          "total": 164,
+                          "won": 113
+                      },
+                      "dribbles": {
+                          "attempts": 3,
+                          "success": 2,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 14,
+                          "committed": 18
+                      },
+                      "cards": {
+                          "yellow": 7,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 14,
+                          "lineups": 12,
+                          "minutes": 1154,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.971428",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 2,
+                          "out": 1,
+                          "bench": 3
+                      },
+                      "shots": {
+                          "total": 2,
+                          "on": 1
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 472,
+                          "key": 3,
+                          "accuracy": 31
+                      },
+                      "tackles": {
+                          "total": 14,
+                          "blocks": 15,
+                          "interceptions": 14
+                      },
+                      "duels": {
+                          "total": 54,
+                          "won": 38
+                      },
+                      "dribbles": {
+                          "attempts": 2,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 3,
+                          "committed": 3
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 2674,
+                  "name": "Rui Patrício",
+                  "firstname": "Rui Pedro",
+                  "lastname": "dos Santos Patrício",
+                  "age": 35,
+                  "birth": {
+                      "date": "1988-02-15",
+                      "place": "Marrazes",
+                      "country": "Portugal"
+                  },
+                  "nationality": "Portugal",
+                  "height": "190 cm",
+                  "weight": "84 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/2674.png"
               },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 35,
+                          "lineups": 35,
+                          "minutes": 3150,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": "6.757142",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 35,
+                          "assists": null,
+                          "saves": 74
+                      },
+                      "passes": {
+                          "total": 763,
+                          "key": null,
+                          "accuracy": 15
+                      },
+                      "tackles": {
+                          "total": 1,
+                          "blocks": null,
+                          "interceptions": 2
+                      },
+                      "duels": {
+                          "total": 4,
+                          "won": 3
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": 1
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 1
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 14,
+                          "lineups": 14,
+                          "minutes": 1320,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": "6.957142",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 9,
+                          "assists": null,
+                          "saves": 34
+                      },
+                      "passes": {
+                          "total": 350,
+                          "key": null,
+                          "accuracy": 16
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": 2,
+                          "won": 2
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 1,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 2,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 30424,
+                  "name": "Ibañez",
+                  "firstname": "Roger",
+                  "lastname": "Ibañez da Silva",
+                  "age": 25,
+                  "birth": {
+                      "date": "1998-11-23",
+                      "place": "Canela",
+                      "country": "Brazil"
+                  },
+                  "nationality": "Brazil",
+                  "height": "185 cm",
+                  "weight": "73 kg",
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/30424.png"
               },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 33,
+                          "lineups": 32,
+                          "minutes": 2797,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.996969",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 1,
+                          "bench": 4
+                      },
+                      "shots": {
+                          "total": 19,
+                          "on": 11
+                      },
+                      "goals": {
+                          "total": 3,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 1645,
+                          "key": 6,
+                          "accuracy": 43
+                      },
+                      "tackles": {
+                          "total": 67,
+                          "blocks": 11,
+                          "interceptions": 66
+                      },
+                      "duels": {
+                          "total": 297,
+                          "won": 186
+                      },
+                      "dribbles": {
+                          "attempts": 19,
+                          "success": 12,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 48,
+                          "committed": 44
+                      },
+                      "cards": {
+                          "yellow": 10,
+                          "yellowred": 1,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 13,
+                          "lineups": 12,
+                          "minutes": 1114,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "7.061538",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 1,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": 7,
+                          "on": 2
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 509,
+                          "key": 2,
+                          "accuracy": 34
+                      },
+                      "tackles": {
+                          "total": 20,
+                          "blocks": 12,
+                          "interceptions": 29
+                      },
+                      "duels": {
+                          "total": 105,
+                          "won": 70
+                      },
+                      "dribbles": {
+                          "attempts": 4,
+                          "success": 2,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 22,
+                          "committed": 14
+                      },
+                      "cards": {
+                          "yellow": 5,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 51572,
+                  "name": "M. Viña",
+                  "firstname": "Matías Nicolás",
+                  "lastname": "Viña Susperreguy",
+                  "age": 26,
+                  "birth": {
+                      "date": "1997-11-09",
+                      "place": "Empalme Olmos",
+                      "country": "Uruguay"
+                  },
+                  "nationality": "Uruguay",
+                  "height": "175 cm",
+                  "weight": "70 kg",
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/51572.png"
               },
-              "duels": {
-                  "total": null,
-                  "won": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 3,
+                          "lineups": 1,
+                          "minutes": 54,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "6.950000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 2,
+                          "out": 1,
+                          "bench": 19
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 18,
+                          "key": 1,
+                          "accuracy": 7
+                      },
+                      "tackles": {
+                          "total": 4,
+                          "blocks": 1,
+                          "interceptions": 2
+                      },
+                      "duels": {
+                          "total": 12,
+                          "won": 7
+                      },
+                      "dribbles": {
+                          "attempts": 1,
+                          "success": 1,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 1,
+                          "committed": 4
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-1.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 4,
+                          "lineups": 3,
+                          "minutes": 245,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": "7.025000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 1,
+                          "bench": 3
+                      },
+                      "shots": {
+                          "total": 1,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 144,
+                          "key": 3,
+                          "accuracy": 29
+                      },
+                      "tackles": {
+                          "total": 5,
+                          "blocks": null,
+                          "interceptions": 5
+                      },
+                      "duels": {
+                          "total": 24,
+                          "won": 17
+                      },
+                      "dribbles": {
+                          "attempts": 3,
+                          "success": 2,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 7,
+                          "committed": 2
+                      },
+                      "cards": {
+                          "yellow": 1,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 53535,
+                  "name": "E. Shomurodov",
+                  "firstname": "Eldor",
+                  "lastname": "Azamat Shomurodov",
+                  "age": 28,
+                  "birth": {
+                      "date": "1995-06-29",
+                      "place": "Jarkurgan",
+                      "country": "Uzbekistan"
+                  },
+                  "nationality": "Uzbekistan",
+                  "height": "190 cm",
+                  "weight": "81 kg",
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/53535.png"
               },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 6,
+                          "lineups": 1,
+                          "minutes": 115,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": "6.266666",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 5,
+                          "out": 1,
+                          "bench": 18
+                      },
+                      "shots": {
+                          "total": 6,
+                          "on": 3
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 32,
+                          "key": null,
+                          "accuracy": 5
+                      },
+                      "tackles": {
+                          "total": 1,
+                          "blocks": null,
+                          "interceptions": 1
+                      },
+                      "duels": {
+                          "total": 19,
+                          "won": 6
+                      },
+                      "dribbles": {
+                          "attempts": 4,
+                          "success": 1,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 2,
+                          "committed": 1
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-1.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 2,
+                          "lineups": 0,
+                          "minutes": 35,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": "7.000000",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 2,
+                          "out": 0,
+                          "bench": 6
+                      },
+                      "shots": {
+                          "total": 3,
+                          "on": 2
+                      },
+                      "goals": {
+                          "total": 1,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 9,
+                          "key": 2,
+                          "accuracy": 2
+                      },
+                      "tackles": {
+                          "total": 1,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": 9,
+                          "won": 3
+                      },
+                      "dribbles": {
+                          "attempts": 3,
+                          "success": 1,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 1,
+                          "committed": 1
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 85063,
+                  "name": "W. Bianda",
+                  "firstname": "William Ludovic",
+                  "lastname": "Brandon Bianda",
+                  "age": 23,
+                  "birth": {
+                      "date": "2000-04-30",
+                      "place": "Suresnes",
+                      "country": "France"
+                  },
+                  "nationality": "France",
+                  "height": "185 cm",
+                  "weight": "87 kg",
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/85063.png"
               },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 157052,
+                  "name": "R. Calafiori",
+                  "firstname": "Riccardo",
+                  "lastname": "Calafiori",
+                  "age": 21,
+                  "birth": {
+                      "date": "2002-05-19",
+                      "place": "Roma",
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": "188 cm",
+                  "weight": "86 kg",
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/157052.png"
               },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 277192,
+                  "name": "P. Boer",
+                  "firstname": "Pietro",
+                  "lastname": "Boer",
+                  "age": 21,
+                  "birth": {
+                      "date": "2002-05-12",
+                      "place": null,
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": "193 cm",
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/277192.png"
               },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 38
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 1
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 15
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 290181,
+                  "name": "F. Tripi",
+                  "firstname": "Filippo",
+                  "lastname": "Tripi",
+                  "age": 21,
+                  "birth": {
+                      "date": "2002-01-06",
+                      "place": null,
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/290181.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 15
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Defender",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 6
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 342038,
+                  "name": "F. Afena-Gyan",
+                  "firstname": "Felix Ohene",
+                  "lastname": "Afena-Gyan",
+                  "age": 20,
+                  "birth": {
+                      "date": "2003-01-19",
+                      "place": null,
+                      "country": "Ghana"
+                  },
+                  "nationality": "Ghana",
+                  "height": "175 cm",
+                  "weight": "62 kg",
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/342038.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": "6.409523",
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 2
+                      },
+                      "shots": {
+                          "total": 12,
+                          "on": 2
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": 174,
+                          "key": 2,
+                          "accuracy": 6
+                      },
+                      "tackles": {
+                          "total": 7,
+                          "blocks": 1,
+                          "interceptions": 1
+                      },
+                      "duels": {
+                          "total": 134,
+                          "won": 40
+                      },
+                      "dribbles": {
+                          "attempts": 16,
+                          "success": 5,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": 11,
+                          "committed": 17
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Attacker",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 342222,
+                  "name": "M. Ivković",
+                  "firstname": "Mate",
+                  "lastname": "Ivković",
+                  "age": 16,
+                  "birth": {
+                      "date": "2006-01-04",
+                      "place": null,
+                      "country": "Croatia"
+                  },
+                  "nationality": "Croatia",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/342222.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": null,
+                          "name": "Club Friendlies",
+                          "country": null,
+                          "logo": null,
+                          "flag": null,
+                          "season": "2022"
+                      },
+                      "games": {
+                          "appearences": 1,
+                          "lineups": 0,
+                          "minutes": 2,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 1,
+                          "out": 0,
+                          "bench": 4
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 354531,
+                  "name": "C. Cassano",
+                  "firstname": "Claudio",
+                  "lastname": "Cassano",
+                  "age": 19,
+                  "birth": {
+                      "date": "2003-07-22",
+                      "place": null,
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-3.api-sports.io/football/players/354531.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-3.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-2.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": null,
+                          "lineups": null,
+                          "minutes": null,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": null,
+                          "out": null,
+                          "bench": null
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": null,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": null,
+                          "yellowred": null,
+                          "red": null
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-2.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": null
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": null,
+                          "name": "Club Friendlies",
+                          "country": null,
+                          "logo": null,
+                          "flag": null,
+                          "season": "2022"
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Midfielder",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 356892,
+                  "name": "G. Baldi",
+                  "firstname": "Gabriele",
+                  "lastname": "Baldi",
+                  "age": 19,
+                  "birth": {
+                      "date": "2004-08-24",
+                      "place": null,
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-2.api-sports.io/football/players/356892.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-2.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-3.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  }
+              ]
+          },
+          {
+              "player": {
+                  "id": 410405,
+                  "name": "J. Del Bello",
+                  "firstname": "Jacopo",
+                  "lastname": "Del Bello",
+                  "age": 19,
+                  "birth": {
+                      "date": "2004-09-25",
+                      "place": null,
+                      "country": "Italy"
+                  },
+                  "nationality": "Italy",
+                  "height": null,
+                  "weight": null,
+                  "injured": false,
+                  "photo": "https://media-1.api-sports.io/football/players/410405.png"
+              },
+              "statistics": [
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 135,
+                          "name": "Serie A",
+                          "country": "Italy",
+                          "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+                          "flag": "https://media-1.api-sports.io/flags/it.svg",
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 1
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": 0,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": 0,
+                          "missed": 0,
+                          "saved": 0
+                      }
+                  },
+                  {
+                      "team": {
+                          "id": 497,
+                          "name": "AS Roma",
+                          "logo": "https://media-1.api-sports.io/football/teams/497.png"
+                      },
+                      "league": {
+                          "id": 3,
+                          "name": "UEFA Europa League",
+                          "country": "World",
+                          "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+                          "flag": null,
+                          "season": 2022
+                      },
+                      "games": {
+                          "appearences": 0,
+                          "lineups": 0,
+                          "minutes": 0,
+                          "number": null,
+                          "position": "Goalkeeper",
+                          "rating": null,
+                          "captain": false
+                      },
+                      "substitutes": {
+                          "in": 0,
+                          "out": 0,
+                          "bench": 0
+                      },
+                      "shots": {
+                          "total": null,
+                          "on": null
+                      },
+                      "goals": {
+                          "total": 0,
+                          "conceded": null,
+                          "assists": null,
+                          "saves": null
+                      },
+                      "passes": {
+                          "total": null,
+                          "key": null,
+                          "accuracy": null
+                      },
+                      "tackles": {
+                          "total": null,
+                          "blocks": null,
+                          "interceptions": null
+                      },
+                      "duels": {
+                          "total": null,
+                          "won": null
+                      },
+                      "dribbles": {
+                          "attempts": null,
+                          "success": null,
+                          "past": null
+                      },
+                      "fouls": {
+                          "drawn": null,
+                          "committed": null
+                      },
+                      "cards": {
+                          "yellow": 0,
+                          "yellowred": 0,
+                          "red": 0
+                      },
+                      "penalty": {
+                          "won": null,
+                          "commited": null,
+                          "scored": null,
+                          "missed": null,
+                          "saved": null
+                      }
+                  }
+              ]
           }
       ]
-  },
-  {
-      "player": {
-          "id": 1265,
-          "name": "Y. Adli",
-          "firstname": "Yacine Zinedine",
-          "lastname": "Adli",
-          "age": 23,
-          "birth": {
-              "date": "2000-07-29",
-              "place": "Vitry-sur-Seine",
-              "country": "France"
-          },
-          "nationality": "France",
-          "height": "186 cm",
-          "weight": "73 kg",
-          "injured": false,
-          "photo": "https://media-3.api-sports.io/football/players/1265.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-2.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-3.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 6,
-                  "lineups": 1,
-                  "minutes": 141,
-                  "number": null,
-                  "position": "Midfielder",
-                  "rating": "6.566666",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 5,
-                  "out": 1,
-                  "bench": 37
-              },
-              "shots": {
-                  "total": 2,
-                  "on": 2
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 69,
-                  "key": 2,
-                  "accuracy": 7
-              },
-              "tackles": {
-                  "total": 6,
-                  "blocks": null,
-                  "interceptions": 1
-              },
-              "duels": {
-                  "total": 26,
-                  "won": 12
-              },
-              "dribbles": {
-                  "attempts": 6,
-                  "success": 4,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 1,
-                  "committed": 4
-              },
-              "cards": {
-                  "yellow": 1,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-3.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-2.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Midfielder",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 0
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 1627,
-          "name": "D. Calabria",
-          "firstname": "Davide",
-          "lastname": "Calabria",
-          "age": 27,
-          "birth": {
-              "date": "1996-12-06",
-              "place": "Brescia",
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": "177 cm",
-          "weight": "70 kg",
-          "injured": false,
-          "photo": "https://media-1.api-sports.io/football/players/1627.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-2.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-1.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 25,
-                  "lineups": 21,
-                  "minutes": 1697,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": "6.917391",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 4,
-                  "out": 11,
-                  "bench": 7
-              },
-              "shots": {
-                  "total": 12,
-                  "on": 2
-              },
-              "goals": {
-                  "total": 1,
-                  "conceded": 0,
-                  "assists": 4,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 1000,
-                  "key": 16,
-                  "accuracy": 37
-              },
-              "tackles": {
-                  "total": 69,
-                  "blocks": 7,
-                  "interceptions": 24
-              },
-              "duels": {
-                  "total": 161,
-                  "won": 98
-              },
-              "dribbles": {
-                  "attempts": 10,
-                  "success": 2,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 14,
-                  "committed": 15
-              },
-              "cards": {
-                  "yellow": 6,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-3.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 6,
-                  "lineups": 6,
-                  "minutes": 499,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": "6.966666",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 2,
-                  "bench": 2
-              },
-              "shots": {
-                  "total": 3,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 260,
-                  "key": 2,
-                  "accuracy": 35
-              },
-              "tackles": {
-                  "total": 17,
-                  "blocks": 3,
-                  "interceptions": 15
-              },
-              "duels": {
-                  "total": 45,
-                  "won": 26
-              },
-              "dribbles": {
-                  "attempts": 4,
-                  "success": 2,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 4,
-                  "committed": 6
-              },
-              "cards": {
-                  "yellow": 2,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 3173,
-          "name": "I. Bennacer",
-          "firstname": "Ismaël",
-          "lastname": "Bennacer",
-          "age": 26,
-          "birth": {
-              "date": "1997-12-01",
-              "place": "Arles",
-              "country": "France"
-          },
-          "nationality": "Algeria",
-          "height": "175 cm",
-          "weight": "70 kg",
-          "injured": false,
-          "photo": "https://media-1.api-sports.io/football/players/3173.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-3.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-3.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 28,
-                  "lineups": 24,
-                  "minutes": 2013,
-                  "number": null,
-                  "position": "Midfielder",
-                  "rating": "7.251851",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 4,
-                  "out": 11,
-                  "bench": 5
-              },
-              "shots": {
-                  "total": 12,
-                  "on": 3
-              },
-              "goals": {
-                  "total": 2,
-                  "conceded": 0,
-                  "assists": 2,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 1301,
-                  "key": 43,
-                  "accuracy": 42
-              },
-              "tackles": {
-                  "total": 61,
-                  "blocks": 7,
-                  "interceptions": 25
-              },
-              "duels": {
-                  "total": 240,
-                  "won": 133
-              },
-              "dribbles": {
-                  "attempts": 37,
-                  "success": 25,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 25,
-                  "committed": 36
-              },
-              "cards": {
-                  "yellow": 5,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-3.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-2.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 10,
-                  "lineups": 9,
-                  "minutes": 592,
-                  "number": null,
-                  "position": "Midfielder",
-                  "rating": "6.840000",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 1,
-                  "out": 8,
-                  "bench": 1
-              },
-              "shots": {
-                  "total": 4,
-                  "on": 3
-              },
-              "goals": {
-                  "total": 1,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 335,
-                  "key": 4,
-                  "accuracy": 28
-              },
-              "tackles": {
-                  "total": 26,
-                  "blocks": null,
-                  "interceptions": 7
-              },
-              "duels": {
-                  "total": 108,
-                  "won": 57
-              },
-              "dribbles": {
-                  "attempts": 21,
-                  "success": 13,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 12,
-                  "committed": 11
-              },
-              "cards": {
-                  "yellow": 1,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 19209,
-          "name": "F. Tomori",
-          "firstname": "Oluwafikayomi Oluwadamilola",
-          "lastname": "Tomori",
-          "age": 26,
-          "birth": {
-              "date": "1997-12-19",
-              "place": "Calgary",
-              "country": "Canada"
-          },
-          "nationality": "England",
-          "height": "185 cm",
-          "weight": "75 kg",
-          "injured": false,
-          "photo": "https://media-2.api-sports.io/football/players/19209.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-2.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-3.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 33,
-                  "lineups": 32,
-                  "minutes": 2765,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": "7.156250",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 1,
-                  "out": 6,
-                  "bench": 2
-              },
-              "shots": {
-                  "total": 7,
-                  "on": 4
-              },
-              "goals": {
-                  "total": 1,
-                  "conceded": 0,
-                  "assists": 1,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 1803,
-                  "key": 7,
-                  "accuracy": 49
-              },
-              "tackles": {
-                  "total": 69,
-                  "blocks": 24,
-                  "interceptions": 29
-              },
-              "duels": {
-                  "total": 224,
-                  "won": 156
-              },
-              "dribbles": {
-                  "attempts": 3,
-                  "success": 2,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 25,
-                  "committed": 27
-              },
-              "cards": {
-                  "yellow": 5,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-1.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 10,
-                  "lineups": 10,
-                  "minutes": 828,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": "6.600000",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 0
-              },
-              "shots": {
-                  "total": 1,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 511,
-                  "key": 3,
-                  "accuracy": 44
-              },
-              "tackles": {
-                  "total": 22,
-                  "blocks": 8,
-                  "interceptions": 10
-              },
-              "duels": {
-                  "total": 65,
-                  "won": 33
-              },
-              "dribbles": {
-                  "attempts": 2,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 2,
-                  "committed": 14
-              },
-              "cards": {
-                  "yellow": 4,
-                  "yellowred": 0,
-                  "red": 1
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 21081,
-          "name": "C. Tătărușanu",
-          "firstname": "Anton Ciprian",
-          "lastname": "Tătărușanu",
-          "age": 37,
-          "birth": {
-              "date": "1986-02-09",
-              "place": "București",
-              "country": "Romania"
-          },
-          "nationality": "Romania",
-          "height": "198 cm",
-          "weight": "90 kg",
-          "injured": false,
-          "photo": "https://media-3.api-sports.io/football/players/21081.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-3.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-3.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 16,
-                  "lineups": 16,
-                  "minutes": 1440,
-                  "number": null,
-                  "position": "Goalkeeper",
-                  "rating": "6.812500",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 22
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 22,
-                  "assists": 1,
-                  "saves": 41
-              },
-              "passes": {
-                  "total": 481,
-                  "key": 2,
-                  "accuracy": 22
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": 1
-              },
-              "duels": {
-                  "total": 5,
-                  "won": 4
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 3,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": 0
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-3.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 5,
-                  "lineups": 5,
-                  "minutes": 450,
-                  "number": null,
-                  "position": "Goalkeeper",
-                  "rating": "7.400000",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 0
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 5,
-                  "assists": null,
-                  "saves": 20
-              },
-              "passes": {
-                  "total": 158,
-                  "key": null,
-                  "accuracy": 24
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": 3,
-                  "won": 3
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 1,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": 0
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 51070,
-          "name": "Z. Ibrahimović",
-          "firstname": "Zlatan",
-          "lastname": "Ibrahimović",
-          "age": 42,
-          "birth": {
-              "date": "1981-10-03",
-              "place": "Malmö",
-              "country": "Sweden"
-          },
-          "nationality": "Sweden",
-          "height": "195 cm",
-          "weight": "95 kg",
-          "injured": false,
-          "photo": "https://media-3.api-sports.io/football/players/51070.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-3.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-3.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-1.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 4,
-                  "lineups": 1,
-                  "minutes": 144,
-                  "number": null,
-                  "position": "Attacker",
-                  "rating": "6.825000",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 3,
-                  "out": 1,
-                  "bench": 6
-              },
-              "shots": {
-                  "total": 5,
-                  "on": 3
-              },
-              "goals": {
-                  "total": 1,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 51,
-                  "key": 1,
-                  "accuracy": 9
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": 1,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": 19,
-                  "won": 9
-              },
-              "dribbles": {
-                  "attempts": 2,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 1,
-                  "committed": 2
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 1,
-                  "missed": 0,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-1.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Attacker",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 0
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 56473,
-          "name": "M. Gabbia",
-          "firstname": "Matteo",
-          "lastname": "Gabbia",
-          "age": 24,
-          "birth": {
-              "date": "1999-10-21",
-              "place": "Busto Arsizio",
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": "185 cm",
-          "weight": "78 kg",
-          "injured": false,
-          "photo": "https://media-3.api-sports.io/football/players/56473.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-1.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-2.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 12,
-                  "lineups": 6,
-                  "minutes": 608,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": "6.616666",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 6,
-                  "out": 1,
-                  "bench": 30
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 356,
-                  "key": null,
-                  "accuracy": 24
-              },
-              "tackles": {
-                  "total": 17,
-                  "blocks": 3,
-                  "interceptions": 5
-              },
-              "duels": {
-                  "total": 47,
-                  "won": 33
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 1,
-                  "committed": 8
-              },
-              "cards": {
-                  "yellow": 2,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-2.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 4,
-                  "lineups": 2,
-                  "minutes": 209,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": "7.100000",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 2,
-                  "out": 0,
-                  "bench": 10
-              },
-              "shots": {
-                  "total": 1,
-                  "on": 1
-              },
-              "goals": {
-                  "total": 1,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 105,
-                  "key": null,
-                  "accuracy": 23
-              },
-              "tackles": {
-                  "total": 3,
-                  "blocks": null,
-                  "interceptions": 3
-              },
-              "duels": {
-                  "total": 12,
-                  "won": 7
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": 3,
-                  "committed": 5
-              },
-              "cards": {
-                  "yellow": 1,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 81012,
-          "name": "D. Vásquez",
-          "firstname": "Devis Estiven",
-          "lastname": "Vásquez Llach",
-          "age": 25,
-          "birth": {
-              "date": "1998-05-12",
-              "place": "Barranquilla",
-              "country": "Colombia"
-          },
-          "nationality": "Colombia",
-          "height": "195 cm",
-          "weight": "93 kg",
-          "injured": false,
-          "photo": "https://media-3.api-sports.io/football/players/81012.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-1.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-2.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Goalkeeper",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 6
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": 0
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 162045,
-          "name": "M. Lazetić",
-          "firstname": "Marko",
-          "lastname": "Lazetić",
-          "age": 19,
-          "birth": {
-              "date": "2004-01-22",
-              "place": "Belgrade",
-              "country": "Serbia"
-          },
-          "nationality": "Serbia",
-          "height": "190 cm",
-          "weight": "80 kg",
-          "injured": false,
-          "photo": "https://media-3.api-sports.io/football/players/162045.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-1.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-1.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 1,
-                  "lineups": 0,
-                  "minutes": 7,
-                  "number": null,
-                  "position": "Attacker",
-                  "rating": "6.300000",
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 1,
-                  "out": 0,
-                  "bench": 5
-              },
-              "shots": {
-                  "total": 1,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": 1,
-                  "key": null,
-                  "accuracy": 1
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": 3,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 1,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-2.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Attacker",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 0
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 297579,
-          "name": "C. Traorè",
-          "firstname": "Chaka",
-          "lastname": "Traorè",
-          "age": 18,
-          "birth": {
-              "date": "2004-12-23",
-              "place": "Abengourou",
-              "country": "Côte d'Ivoire"
-          },
-          "nationality": "Côte d'Ivoire",
-          "height": "175 cm",
-          "weight": null,
-          "injured": false,
-          "photo": "https://media-3.api-sports.io/football/players/297579.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-3.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-3.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": null,
-                  "lineups": null,
-                  "minutes": null,
-                  "number": null,
-                  "position": "Attacker",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": null,
-                  "out": null,
-                  "bench": null
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": null,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": null,
-                  "yellowred": null,
-                  "red": null
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-3.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": null,
-                  "name": "Club Friendlies",
-                  "country": null,
-                  "logo": null,
-                  "flag": null,
-                  "season": "2022"
-              },
-              "games": {
-                  "appearences": 1,
-                  "lineups": 0,
-                  "minutes": 28,
-                  "number": null,
-                  "position": "Attacker",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 1,
-                  "out": 0,
-                  "bench": 1
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 325143,
-          "name": "G. Robotti",
-          "firstname": "Giovanni",
-          "lastname": "Robotti",
-          "age": 20,
-          "birth": {
-              "date": "2002-01-30",
-              "place": "Varese",
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": null,
-          "weight": null,
-          "injured": false,
-          "photo": "https://media-1.api-sports.io/football/players/325143.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-2.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-2.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": null,
-                  "lineups": null,
-                  "minutes": null,
-                  "number": null,
-                  "position": "Midfielder",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": null,
-                  "out": null,
-                  "bench": null
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": null,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": null,
-                  "yellowred": null,
-                  "red": null
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": null,
-                  "name": "Club Friendlies",
-                  "country": null,
-                  "logo": null,
-                  "flag": null,
-                  "season": "2022"
-              },
-              "games": {
-                  "appearences": 1,
-                  "lineups": 0,
-                  "minutes": 8,
-                  "number": null,
-                  "position": "Midfielder",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 1,
-                  "out": 0,
-                  "bench": 1
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 336609,
-          "name": "A. Bozzolan",
-          "firstname": "Andrea",
-          "lastname": "Bozzolan",
-          "age": 19,
-          "birth": {
-              "date": "2004-02-23",
-              "place": null,
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": "178 cm",
-          "weight": null,
-          "injured": false,
-          "photo": "https://media-1.api-sports.io/football/players/336609.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-3.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-2.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 4
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 336687,
-          "name": "A. Coubiș",
-          "firstname": "Andrei",
-          "lastname": "Coubiș",
-          "age": 20,
-          "birth": {
-              "date": "2003-09-29",
-              "place": null,
-              "country": "Italy"
-          },
-          "nationality": "Romania",
-          "height": "189 cm",
-          "weight": null,
-          "injured": false,
-          "photo": "https://media-1.api-sports.io/football/players/336687.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-3.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-2.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": null,
-                  "lineups": null,
-                  "minutes": null,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": null,
-                  "out": null,
-                  "bench": null
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": null,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": null,
-                  "yellowred": null,
-                  "red": null
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-2.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 3
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 336689,
-          "name": "Y. El Hilali",
-          "firstname": "Youns Gabriele",
-          "lastname": "El Hilali",
-          "age": 19,
-          "birth": {
-              "date": "2003-06-08",
-              "place": "Milan",
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": null,
-          "weight": null,
-          "injured": false,
-          "photo": "https://media-2.api-sports.io/football/players/336689.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-1.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-3.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": null,
-                  "lineups": null,
-                  "minutes": null,
-                  "number": null,
-                  "position": "Attacker",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": null,
-                  "out": null,
-                  "bench": null
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": null,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": null,
-                  "yellowred": null,
-                  "red": null
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": null,
-                  "name": "Club Friendlies",
-                  "country": null,
-                  "logo": null,
-                  "flag": null,
-                  "season": "2022"
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Attacker",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 0
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 342995,
-          "name": "L. Nava",
-          "firstname": "Lapo Francesco Maria",
-          "lastname": "Nava",
-          "age": 19,
-          "birth": {
-              "date": "2004-01-22",
-              "place": "Milano",
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": null,
-          "weight": null,
-          "injured": false,
-          "photo": "https://media-1.api-sports.io/football/players/342995.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-1.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-2.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Goalkeeper",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 2
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": 0
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-3.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 2,
-                  "name": "UEFA Champions League",
-                  "country": "World",
-                  "logo": "https://media-2.api-sports.io/football/leagues/2.png",
-                  "flag": null,
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": 0,
-                  "lineups": 0,
-                  "minutes": 0,
-                  "number": null,
-                  "position": "Goalkeeper",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 0,
-                  "out": 0,
-                  "bench": 4
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": 0,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": 0,
-                  "missed": 0,
-                  "saved": 0
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 371910,
-          "name": "J. Šimić",
-          "firstname": "Jan-Carlo",
-          "lastname": "Šimić",
-          "age": 18,
-          "birth": {
-              "date": "2005-05-02",
-              "place": null,
-              "country": "Germany"
-          },
-          "nationality": "Serbia",
-          "height": "186 cm",
-          "weight": null,
-          "injured": false,
-          "photo": "https://media-2.api-sports.io/football/players/371910.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-1.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-1.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-3.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": null,
-                  "lineups": null,
-                  "minutes": null,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": null,
-                  "out": null,
-                  "bench": null
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": null,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": null,
-                  "yellowred": null,
-                  "red": null
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 374359,
-          "name": "D. Bartesaghi",
-          "firstname": "Davide",
-          "lastname": "Bartesaghi",
-          "age": 17,
-          "birth": {
-              "date": "2005-12-29",
-              "place": null,
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": null,
-          "weight": null,
-          "injured": false,
-          "photo": "https://media-3.api-sports.io/football/players/374359.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-2.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-1.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": null,
-                  "lineups": null,
-                  "minutes": null,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": null,
-                  "out": null,
-                  "bench": null
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": null,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": null,
-                  "yellowred": null,
-                  "red": null
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          },
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-3.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": null,
-                  "name": "Club Friendlies",
-                  "country": null,
-                  "logo": null,
-                  "flag": null,
-                  "season": "2022"
-              },
-              "games": {
-                  "appearences": 1,
-                  "lineups": 0,
-                  "minutes": 8,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": 1,
-                  "out": 0,
-                  "bench": 1
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": 0,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": 0,
-                  "yellowred": 0,
-                  "red": 0
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          }
-      ]
-  },
-  {
-      "player": {
-          "id": 384423,
-          "name": "A. Bakoune",
-          "firstname": "Adam",
-          "lastname": "Bakoune",
-          "age": 17,
-          "birth": {
-              "date": "2006-02-06",
-              "place": null,
-              "country": "Italy"
-          },
-          "nationality": "Italy",
-          "height": null,
-          "weight": null,
-          "injured": false,
-          "photo": "https://media-1.api-sports.io/football/players/384423.png"
-      },
-      "statistics": [
-          {
-              "team": {
-                  "id": 489,
-                  "name": "AC Milan",
-                  "logo": "https://media-2.api-sports.io/football/teams/489.png"
-              },
-              "league": {
-                  "id": 135,
-                  "name": "Serie A",
-                  "country": "Italy",
-                  "logo": "https://media-2.api-sports.io/football/leagues/135.png",
-                  "flag": "https://media-1.api-sports.io/flags/it.svg",
-                  "season": 2022
-              },
-              "games": {
-                  "appearences": null,
-                  "lineups": null,
-                  "minutes": null,
-                  "number": null,
-                  "position": "Defender",
-                  "rating": null,
-                  "captain": false
-              },
-              "substitutes": {
-                  "in": null,
-                  "out": null,
-                  "bench": null
-              },
-              "shots": {
-                  "total": null,
-                  "on": null
-              },
-              "goals": {
-                  "total": null,
-                  "conceded": null,
-                  "assists": null,
-                  "saves": null
-              },
-              "passes": {
-                  "total": null,
-                  "key": null,
-                  "accuracy": null
-              },
-              "tackles": {
-                  "total": null,
-                  "blocks": null,
-                  "interceptions": null
-              },
-              "duels": {
-                  "total": null,
-                  "won": null
-              },
-              "dribbles": {
-                  "attempts": null,
-                  "success": null,
-                  "past": null
-              },
-              "fouls": {
-                  "drawn": null,
-                  "committed": null
-              },
-              "cards": {
-                  "yellow": null,
-                  "yellowred": null,
-                  "red": null
-              },
-              "penalty": {
-                  "won": null,
-                  "commited": null,
-                  "scored": null,
-                  "missed": null,
-                  "saved": null
-              }
-          }
-      ]
-  }
-  ]
+    }
+    ]
 
 }
 

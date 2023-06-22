@@ -13,9 +13,3 @@ export interface Responce{
   team: Team;
   venue: any;
 }
-
-
-export interface Responce2{
-  player: any;
-  statistics: any;
-}
