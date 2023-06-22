@@ -1,3 +1,35 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.cards-body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.example-card {
+  width: 16rem;
+  height: 26rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.card-title, .card-subtitle {
+  text-align: center;
+}
+
+.player-image {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.player-content {
+  padding: 1rem;
+}

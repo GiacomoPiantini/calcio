@@ -14,13 +14,25 @@
 
 <!------------------>
 
+<div class="cards-body">
 <div *ngFor="let player of formation">
   <mat-card class="example-card">
     <mat-card-header>
-      <mat-card-title class="card-title">{{ player.name }}</mat-card-title>
-      <mat-card-subtitle>{{ player.lastname }}</mat-card-subtitle>
+      <mat-card-title class="card-title">{{ player.name }} {{ player.lastname }}</mat-card-title>
+      <mat-card-subtitle class="card-subtitle">{{ player.position }}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image src="{{ player?.photo }}">
+    <img class="player-image" mat-card-image src="{{ player?.photo }}">
+    <mat-card-content class="player-content">
+      <p>
+        Age: {{ player.age }}
+      </p>
+      <p>
+        Nationality: {{ player.nationality }}
+      </p>
+      <p>
+        Height: {{ player.height }} {{ player.weight }}
+      </p>
+    </mat-card-content>
     </mat-card>
 </div>
-
+</div>

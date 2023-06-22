@@ -27,15 +27,20 @@ export class FormationComponent {
     /* ((p) => this.formation = p[0].response); */
     (res: any) => {
       const playersData: any[] = res[0].response;
-      this.formation = playersData.map((players: any) => ({
-        id: players.player.id,
-        name: players.player.name,
-        lastname: players.player.lastname,
-        age: players.player.age,
-        nationality: players.player.nationality,
-        position: players.statistics[0].games.position,
-        photo: players.player.photo
-      }));
+      this.formation = playersData.map((players: any) => {
+        const { player, statistics } = players;
+        return {
+        id: player.id,
+        name: player.firstname,
+        lastname: player.lastname,
+        age: player.age,
+        weight: player.weight,
+        height: player.height,
+        nationality: player.nationality,
+        position: statistics[0].games.position,
+        photo: player.photo
+      }
+      });
       console.log("Formazione della squadra scelta:", this.formation);
     })
   }
