@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TeamsService } from '../services/teams.service';
 import { ActivatedRoute } from '@angular/router';
+import { Player } from '../models/player';
 
 @Component({
   selector: 'app-formation',
@@ -10,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class FormationComponent {
 
   currentId = this.activatedRoute.snapshot.params['id']
-  formation: any[]=[];
+  formation: Player[]=[];
 
   constructor(
     private teamsService: TeamsService,
@@ -22,9 +23,20 @@ export class FormationComponent {
 
   getPlayers(){
     console.log(this.currentId)
-    this.teamsService.getFormation(this.currentId).subscribe((p) => this.formation = p);
-    console.log("La mia formazioneee",this.formation);
-    console.log(this.currentId)
-
+    this.teamsService.getFormation(this.currentId).subscribe(
+    /* ((p) => this.formation = p[0].response); */
+    (res: any) => {
+      const playersData: any[] = res[0].response;
+      this.formation = playersData.map((players: any) => ({
+        id: players.player.id,
+        name: players.player.name,
+        lastname: players.player.lastname,
+        age: players.player.age,
+        nationality: players.player.nationality,
+        position: players.statistics[0].games.position,
+        photo: players.player.photo
+      }));
+      console.log("Formazione della squadra scelta:", this.formation);
+    })
   }
 }
