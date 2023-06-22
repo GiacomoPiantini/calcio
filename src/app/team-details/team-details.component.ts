@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { TeamsService } from '../services/teams.service';
 import { Team } from '../models/team';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-team-details',
@@ -14,7 +15,7 @@ export class TeamDetailsComponent implements OnChanges{
 
   teamDetails: Team | undefined;
 
-  constructor(private teamService:TeamsService){}
+  constructor(private teamService:TeamsService,private router: Router){}
 
   ngOnChanges(changes: SimpleChanges): void { //inserisco ngOnChanges perchè deve visualizzare il cambiamento
     this.getTeamDetail(this.currentIdTeam);
@@ -32,4 +33,9 @@ export class TeamDetailsComponent implements OnChanges{
       console.log("Questo è dettaglio dal comp team-details", this.teamDetails)
     }
   } */
+
+  goFormation(currentId:number){
+    console.log("sonolaformazione",currentId);
+    this.router.navigateByUrl('formation/' + currentId);
+  }
 }

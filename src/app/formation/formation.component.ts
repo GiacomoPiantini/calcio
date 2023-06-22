@@ -15,13 +15,14 @@ export class FormationComponent {
   constructor(
     private teamsService: TeamsService,
   ){
-    this.getPlayers()
+    //this.getPlayers()
   }
 
 
-  getPlayers(){
+/*   getPlayers(){
+    console.log(this.currentIdTeam)
     this.teamsService.getFormation(this.currentIdTeam).subscribe((p) => this.formation = p);
     console.log(this.formation);
 
-  }
+  } */
 }

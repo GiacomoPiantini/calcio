@@ -6,7 +6,7 @@
   </mat-card-header>
   <img mat-card-image src="{{ teamDetails?.logo }}">
   <mat-card-actions>
-    <button mat-button routerLink="/formation" >Formazione</button>
+    <button mat-button (click)="goFormation(currentIdTeam)">Formazione</button>
   </mat-card-actions>
 </mat-card>
 </div>
