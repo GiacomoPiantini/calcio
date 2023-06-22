@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { TeamsService } from '../services/teams.service';
 
 @Component({
@@ -6,21 +6,23 @@ import { TeamsService } from '../services/teams.service';
   templateUrl: './team-details.component.html',
   styleUrls: ['./team-details.component.scss']
 })
-export class TeamDetailsComponent{
+export class TeamDetailsComponent implements OnChanges{
 
 
-  @Input('currentIdTeam') currentIdTeam?: any;
+  @Input('currentIdTeam') currentIdTeam?: any; //prendiamo in imput dal componente home l'id della squadra
 
   teamDetails: any[]=[];
-  teamsService: any;
 
-  constructor(private teamService:TeamsService){
-    this.getTeamDetails();
+  constructor(private teamService:TeamsService){}
+
+  ngOnChanges(changes: SimpleChanges): void { //inserisco ngOnChanges perchè deve visualizzare il cambiamento
+    //console.log("questooooooo",this.currentIdTeam);
+    this.getTeamDetail(this.currentIdTeam);
   }
 
-  getTeamDetails(){
-   // this.teamDetails = this.teamsService.getTeamDetails(this.currentIdTeam).subscribe();
-    console.log("questooooooo",this.currentIdTeam)
+  getTeamDetail(currentId: number){ //chiamiamo il servizio per recuperare il dettaglio
+    //console.log("jdvjsjv sj", currentId)
+    this.teamService.getTeamDetails(currentId).subscribe((res:any) => this.teamDetails = res);
   }
 
 }
