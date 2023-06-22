@@ -11,14 +11,19 @@
   flex-wrap: wrap;
 }
 
-.example-card {
-  width: 16rem;
+.player-card {
+  width: 14rem;
   height: 26rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  margin: 1rem;
+  margin: 2rem;
+}
+
+.player-card:hover {
+  cursor: pointer;
+  scale: 1.05;
+  transition: all .5s;
 }
 
 .card-title, .card-subtitle {
@@ -32,4 +37,8 @@
 
 .player-content {
   padding: 1rem;
+}
+
+.loader {
+  margin: 1rem;
 }

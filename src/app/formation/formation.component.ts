@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TeamsService } from '../services/teams.service';
 import { ActivatedRoute } from '@angular/router';
 import { Player } from '../models/player';
+import { delay } from 'rxjs';
 
 @Component({
   selector: 'app-formation',
@@ -12,6 +13,7 @@ export class FormationComponent {
 
   currentId = this.activatedRoute.snapshot.params['id']
   formation: Player[]=[];
+  isLoading = true;
 
   constructor(
     private teamsService: TeamsService,
@@ -22,10 +24,12 @@ export class FormationComponent {
 
 
   getPlayers(){
+    this.isLoading = true;
     console.log(this.currentId)
-    this.teamsService.getFormation(this.currentId).subscribe(
-    /* ((p) => this.formation = p[0].response); */
-    (res: any) => {
+    this.teamsService.getFormation(this.currentId)
+    .pipe(delay(2000))
+    .subscribe(
+      (res: any) => {
       const playersData: any[] = res[0].response;
       this.formation = playersData.map((players: any) => {
         const { player, statistics } = players;
@@ -42,6 +46,7 @@ export class FormationComponent {
       }
       });
       console.log("Formazione della squadra scelta:", this.formation);
+      this.isLoading = false;
     })
   }
 }

@@ -15,8 +15,12 @@
 <!------------------>
 
 <div class="cards-body">
+  <div *ngIf="isLoading; else content">
+    <mat-progress-spinner color="primary" mode="indeterminate" class="loader"></mat-progress-spinner>
+  </div>
+  <ng-template #content>
 <div *ngFor="let player of formation">
-  <mat-card class="example-card">
+  <mat-card class="player-card">
     <mat-card-header>
       <mat-card-title class="card-title">{{ player.name }} {{ player.lastname }}</mat-card-title>
       <mat-card-subtitle class="card-subtitle">{{ player.position }}</mat-card-subtitle>
@@ -35,4 +39,5 @@
     </mat-card-content>
     </mat-card>
 </div>
+</ng-template>
 </div>
