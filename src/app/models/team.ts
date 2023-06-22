@@ -20,5 +20,5 @@ export interface Venue{
 
 export interface Responce{
   team: Team;
-  venue: any;
+  venue: Venue | any;
 }
