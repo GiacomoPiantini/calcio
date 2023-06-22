@@ -19,6 +19,10 @@ const routes: Routes = [
     component: FormationComponent,
   },
   {
+    path: 'details/:id',
+    component: FormationComponent,
+  },
+  {
     path: 'player/:id',
     component: PlayerComponent,
   },
