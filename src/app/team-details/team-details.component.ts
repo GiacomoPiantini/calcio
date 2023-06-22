@@ -25,5 +25,11 @@ export class TeamDetailsComponent implements OnChanges{
     this.teamService.getTeamDetails(currentId).subscribe((res:any) => this.teamDetails = res);
     console.log(this.teamDetails)
   }
-
+/*   getTeamDetail(currentId: number | undefined){ //chiamiamo il servizio per recuperare il dettaglio
+    console.log("jdvjsjv sj", currentId)
+    if (currentId) {
+      this.teamService.getTeamDetails(currentId).subscribe((res:any) => this.teamDetails = res);
+      console.log("Questo è dettaglio dal comp team-details", this.teamDetails)
+    }
+  } */
 }

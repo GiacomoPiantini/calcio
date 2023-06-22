@@ -2,7 +2,14 @@ export interface Team {
   id: number
   name: string
   country: string
-  founded: number
+  founded: any
   national: boolean
   logo: string
+  code: any
+}
+
+
+export interface Responce{
+  team: Team;
+  venue: any;
 }

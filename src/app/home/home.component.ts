@@ -26,14 +26,15 @@ export class HomeComponent {
     this.teamsService.getTeams()
     .subscribe(
       (res: any) => {
-        const teamsData: any[] = res.response;
+        const teamsData: any[] = res;
         this.teams = teamsData.map((teams: any) => ({
           id: teams.team.id,
           name: teams.team.name,
           country: teams.team.country,
           founded: teams.team.founded,
           national: teams.team.national,
-          logo: teams.team.logo
+          logo: teams.team.logo,
+          code: teams.team.code
         }));
         console.log(this.teams);
       }
