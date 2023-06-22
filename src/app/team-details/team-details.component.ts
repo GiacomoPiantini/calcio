@@ -15,7 +15,7 @@ export class TeamDetailsComponent implements OnChanges{
 
   teamDetails: Team | undefined;
 
-  constructor(private teamService:TeamsService,private router: Router){}
+  constructor(private teamsService:TeamsService,private router: Router){}
 
   ngOnChanges(changes: SimpleChanges): void { //inserisco ngOnChanges perchè deve visualizzare il cambiamento
     this.getTeamDetail(this.currentIdTeam);
@@ -23,16 +23,9 @@ export class TeamDetailsComponent implements OnChanges{
 
   getTeamDetail(currentId: number){ //chiamiamo il servizio per recuperare il dettaglio
     console.log("current ID>", currentId)
-    this.teamService.getTeamDetails(currentId).subscribe((res:any) => this.teamDetails = res);
+    this.teamsService.getTeamDetails(currentId).subscribe((res:any) => this.teamDetails = res);
     console.log(this.teamDetails)
   }
-/*   getTeamDetail(currentId: number | undefined){ //chiamiamo il servizio per recuperare il dettaglio
-    console.log("jdvjsjv sj", currentId)
-    if (currentId) {
-      this.teamService.getTeamDetails(currentId).subscribe((res:any) => this.teamDetails = res);
-      console.log("Questo è dettaglio dal comp team-details", this.teamDetails)
-    }
-  } */
 
   goFormation(currentId:number){
     console.log("sonolaformazione",currentId);

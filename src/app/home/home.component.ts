@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TeamsService } from '../services/teams.service';
-import { Team } from '../models/team';
+import { Team, Venue } from '../models/team';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -13,13 +13,15 @@ export class HomeComponent {
   teamsControl = new FormControl<Team | null >(null, Validators.required)
   selectFormControl = new FormControl("", Validators.required)
 
-  teams: Team[] = []
+  teams: Team[] = [];
+  stadiumTeam: Venue[] = [];
   teamId?: number;
 
   constructor(
     private teamsService: TeamsService,
   ){
-    this.getNamesTeams()
+    this.getNamesTeams();
+    this.getVenueTeams();
   }
 
   public getNamesTeams(){
@@ -34,9 +36,29 @@ export class HomeComponent {
           founded: teams.team.founded,
           national: teams.team.national,
           logo: teams.team.logo,
-          code: teams.team.code
+          code: teams.team.code,
+          address: teams.venue.address,
         }));
         console.log(this.teams);
+      }
+    )
+  }
+
+  public getVenueTeams(){
+    this.teamsService.getTeams()
+    .subscribe(
+      (res: any) => {
+        const teamsData: any[] = res;
+        this.stadiumTeam = teamsData.map((teams: any) => ({
+          id: teams.venue.id,
+          name: teams.venue.name,
+          address: teams.venue.address,
+          city: teams.venue.city,
+          capacity: teams.venue.capacity,
+          surface: teams.venue.surface,
+          image: teams.venue.image,
+        }));
+        console.log(this.stadiumTeam);
       }
     )
   }
