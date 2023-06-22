@@ -14,7 +14,7 @@ export class HomeComponent {
   selectFormControl = new FormControl("", Validators.required)
 
   teams: Team[] = []
-  currentIdTeam: number | null = null;
+  teamId: number | null = null;
 
   constructor(
     private teamsService: TeamsService,
@@ -41,12 +41,10 @@ export class HomeComponent {
   }
 
   teamDetails() {
-    const selectedTeam: Team | null = this.teamsControl.value;
+    const selectedTeam: Team | null = this.teamsControl.value; //prendo l'id del team per poter poi prendere i dettagli e mandarlo ai componente dei dettagli
     if (selectedTeam) {
-      const teamId: number = selectedTeam.id;
-      console.log('ID della squadra è: ' + teamId);
-      this.teamsService.getTeamDetails(teamId).subscribe();
-      this.currentIdTeam = teamId
+      this.teamId = selectedTeam.id; //assegno l'id a questa variabile che poi passo al template
+      console.log('ID della squadra è: ' + this.teamId);
     }
   }
 
