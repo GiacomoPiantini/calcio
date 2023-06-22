@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-team-details',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./team-details.component.scss']
 })
 export class TeamDetailsComponent {
+
+  @Input('currentIdTeam') currentIdTeam?: any;
+
 
 }
