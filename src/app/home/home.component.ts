@@ -18,11 +18,7 @@ export class HomeComponent {
   teamId?: number;
 
   constructor(
-    private teamsService: TeamsService,
-  ){
-    this.getNamesTeams();
-    this.getVenueTeams();
-  }
+    private teamsService: TeamsService,){this.getNamesTeams();}
 
   public getNamesTeams(){
     this.teamsService.getTeams()
@@ -48,26 +44,7 @@ export class HomeComponent {
           surface: teams.venue.surface,
           image: teams.venue.image,
         }));
-        console.log(this.teams);
-      }
-    )
-  }
-
-  public getVenueTeams(){
-    this.teamsService.getTeams()
-    .subscribe(
-      (res: any) => {
-        const teamsData: any[] = res;
-        this.stadiumTeam = teamsData.map((teams: any) => ({
-          id: teams.venue.id,
-          name: teams.venue.name,
-          address: teams.venue.address,
-          city: teams.venue.city,
-          capacity: teams.venue.capacity,
-          surface: teams.venue.surface,
-          image: teams.venue.image,
-        }));
-        console.log(this.stadiumTeam);
+        console.log(this.teamsData);
       }
     )
   }
@@ -76,7 +53,6 @@ export class HomeComponent {
     const selectedTeam = this.teamsControl.value?.team; //prendo l'id del team per poter poi prendere i dettagli e mandarlo ai componente dei dettagli
     if (selectedTeam) {
       this.teamId = selectedTeam.id; //assegno l'id a questa variabile che poi passo al template
-      //console.log('ID della squadra è: ' + this.teamId);
     }
   }
 
