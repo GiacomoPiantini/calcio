@@ -16,13 +16,14 @@ export class TeamDetailsComponent implements OnChanges{
   constructor(private teamService:TeamsService){}
 
   ngOnChanges(changes: SimpleChanges): void { //inserisco ngOnChanges perchè deve visualizzare il cambiamento
-    //console.log("questooooooo",this.currentIdTeam);
+    console.log("questooooooo",changes);
     this.getTeamDetail(this.currentIdTeam);
   }
 
   getTeamDetail(currentId: number){ //chiamiamo il servizio per recuperare il dettaglio
-    //console.log("jdvjsjv sj", currentId)
+    console.log("jdvjsjv sj", currentId)
     this.teamService.getTeamDetails(currentId).subscribe((res:any) => this.teamDetails = res);
+    console.log(this.teamDetails)
   }
 
 }
