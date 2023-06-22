@@ -1,22 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { TeamsService } from '../services/teams.service';
 
 @Component({
   selector: 'app-team-details',
   templateUrl: './team-details.component.html',
   styleUrls: ['./team-details.component.scss']
 })
-export class TeamDetailsComponent implements OnInit{
+export class TeamDetailsComponent{
 
 
   @Input('currentIdTeam') currentIdTeam?: any;
 
-  teamDetail: any[]=[];
+  teamDetails: any[]=[];
   teamsService: any;
 
-
-  ngOnInit(): void {
-    this.teamsService.getTeamDetails(this.currentIdTeam).subscribe();
+  constructor(private teamService:TeamsService){
+    this.getTeamDetails();
   }
 
+  getTeamDetails(){
+   // this.teamDetails = this.teamsService.getTeamDetails(this.currentIdTeam).subscribe();
+    console.log("questooooooo",this.currentIdTeam)
+  }
 
 }

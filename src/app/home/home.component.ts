@@ -14,7 +14,7 @@ export class HomeComponent {
   selectFormControl = new FormControl("", Validators.required)
 
   teams: Team[] = []
-  teamId: number | null = null;
+  teamId: number = 0;
 
   constructor(
     private teamsService: TeamsService,
