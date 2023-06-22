@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { TeamsService } from '../services/teams.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-formation',
@@ -8,21 +9,22 @@ import { TeamsService } from '../services/teams.service';
 })
 export class FormationComponent {
 
-  @Input('currentIdTeam') currentIdTeam?: any; //prendiamo in imput dal componente home l'id della squadra
-
+  currentId = this.activatedRoute.snapshot.params['id']
   formation: any[]=[];
 
   constructor(
     private teamsService: TeamsService,
+    private activatedRoute: ActivatedRoute
   ){
-    //this.getPlayers()
+    this.getPlayers()
   }
 
 
-/*   getPlayers(){
-    console.log(this.currentIdTeam)
-    this.teamsService.getFormation(this.currentIdTeam).subscribe((p) => this.formation = p);
-    console.log(this.formation);
+  getPlayers(){
+    console.log(this.currentId)
+    this.teamsService.getFormation(this.currentId).subscribe((p) => this.formation = p);
+    console.log("La mia formazioneee",this.formation);
+    console.log(this.currentId)
 
-  } */
+  }
 }
