@@ -25,10 +25,11 @@ export class TeamsService {
   };
 
   getTeamDetails(id: number): Observable<Team>{
-    console.log("Service team details");
+    return of(this.TEAMS.map((t) => t.team).filter((t) => t.id === id)[0])
+    /* console.log("Service team details");
     const headers = new HttpHeaders().set('x-apisports-key', this.apiKey);
     return this.httpClient
-    .get<Team>(this.configUrl + "id=" + id, { headers })
+    .get<Team>(this.configUrl + "id=" + id, { headers }) */
   };
 
 /*   getFormation(id: number):  Observable<Team>{
