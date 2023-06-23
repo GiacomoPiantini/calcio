@@ -4,11 +4,13 @@
 
 .cards-body {
   width: 100vw;
+  height: calc(100% - 3rem);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow: scroll;
 }
 
 .player-card {
@@ -22,7 +24,7 @@
 
 .player-card:hover {
   cursor: pointer;
-  scale: 1.05;
+  transform: scale(1.05);
   transition: all .5s;
 }
 
