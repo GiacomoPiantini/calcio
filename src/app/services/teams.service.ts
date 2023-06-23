@@ -76,7 +76,7 @@ export class TeamsService {
         "venue": {
             "id": 935,
             "name": "MAPEI Stadium - Città del Tricolore",
-            "address": "Piazza Azzuri d&apos;Italia, 1",
+            "address": "Piazzale Atleti Azzuri D'Italia, 1",
             "city": "Reggio nell&apos;Emilia",
             "capacity": 23717,
             "surface": "grass",
