@@ -18256,7 +18256,10336 @@ export class TeamsService {
               ]
           }
       ]
+    },
+    {
+      "get": "players",
+      "parameters": {
+      "season": "2022",
+      "team": "487"
+      },
+      "errors": [
+      ],
+      "results": 20,
+      "paging": {
+      "current": 1,
+      "total": 3
+      },
+      "response": [
+      {
+      "player": {
+      "id": 317,
+      "name": "E. Hysaj",
+      "firstname": "Elseid",
+      "lastname": "Hysaj",
+      "age": 29,
+      "birth": {
+      "date": "1994-02-02",
+      "place": "Shkodër",
+      "country": "Albania"
+      },
+      "nationality": "Albania",
+      "height": "182 cm",
+      "weight": "75 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/317.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 34,
+      "lineups": 22,
+      "minutes": 1992,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.741176",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 12,
+      "out": 8,
+      "bench": 15
+      },
+      "shots": {
+      "total": 3,
+      "on": 2
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 1214,
+      "key": 13,
+      "accuracy": 30
+      },
+      "tackles": {
+      "total": 39,
+      "blocks": 7,
+      "interceptions": 20
+      },
+      "duels": {
+      "total": 165,
+      "won": 83
+      },
+      "dribbles": {
+      "attempts": 16,
+      "success": 6,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 14,
+      "committed": 19
+      },
+      "cards": {
+      "yellow": 3,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 6,
+      "lineups": 6,
+      "minutes": 540,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.700000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 378,
+      "key": 3,
+      "accuracy": 54
+      },
+      "tackles": {
+      "total": 9,
+      "blocks": 1,
+      "interceptions": 6
+      },
+      "duels": {
+      "total": 41,
+      "won": 18
+      },
+      "dribbles": {
+      "attempts": 9,
+      "success": 3,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 2,
+      "committed": 6
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 1470,
+      "name": "Luís Maximiano",
+      "firstname": "Luís Manuel",
+      "lastname": "Arantes Maximiano",
+      "age": 24,
+      "birth": {
+      "date": "1999-01-05",
+      "place": "Braga",
+      "country": "Portugal"
+      },
+      "nationality": "Portugal",
+      "height": "190 cm",
+      "weight": "82 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/1470.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 1,
+      "lineups": 1,
+      "minutes": 6,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "3.000000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 36
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 3,
+      "key": null,
+      "accuracy": 2
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": 1
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 1
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 1
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 6
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 1632,
+      "name": "A. Romagnoli",
+      "firstname": "Alessio",
+      "lastname": "Romagnoli",
+      "age": 28,
+      "birth": {
+      "date": "1995-01-12",
+      "place": "Roma",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "185 cm",
+      "weight": "75 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/1632.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 34,
+      "lineups": 33,
+      "minutes": 2925,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.994117",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 3,
+      "bench": 2
+      },
+      "shots": {
+      "total": 11,
+      "on": 5
+      },
+      "goals": {
+      "total": 2,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 1847,
+      "key": 2,
+      "accuracy": 49
+      },
+      "tackles": {
+      "total": 33,
+      "blocks": 26,
+      "interceptions": 38
+      },
+      "duels": {
+      "total": 225,
+      "won": 131
+      },
+      "dribbles": {
+      "attempts": 1,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 19,
+      "committed": 35
+      },
+      "cards": {
+      "yellow": 6,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 4,
+      "lineups": 4,
+      "minutes": 343,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.650000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 1,
+      "bench": 2
+      },
+      "shots": {
+      "total": 1,
+      "on": 1
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 288,
+      "key": null,
+      "accuracy": 66
+      },
+      "tackles": {
+      "total": 4,
+      "blocks": 2,
+      "interceptions": 2
+      },
+      "duels": {
+      "total": 14,
+      "won": 8
+      },
+      "dribbles": {
+      "attempts": 1,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 1,
+      "committed": 4
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 1836,
+      "name": "F. Acerbi",
+      "firstname": "Francesco Ace",
+      "lastname": "Acerbi",
+      "age": 35,
+      "birth": {
+      "date": "1988-02-10",
+      "place": "Vizzolo Predabissi",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "192 cm",
+      "weight": "88 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/1836.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.980000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": 10,
+      "on": 2
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 2,
+      "saves": null
+      },
+      "passes": {
+      "total": 1542,
+      "key": 16,
+      "accuracy": 45
+      },
+      "tackles": {
+      "total": 32,
+      "blocks": 18,
+      "interceptions": 36
+      },
+      "duels": {
+      "total": 204,
+      "won": 130
+      },
+      "dribbles": {
+      "attempts": 10,
+      "success": 7,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 13,
+      "committed": 16
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 1841,
+      "name": "Patric",
+      "firstname": "Patricio",
+      "lastname": "Gabarrón Gil",
+      "age": 30,
+      "birth": {
+      "date": "1993-04-17",
+      "place": "Mula",
+      "country": "Spain"
+      },
+      "nationality": "Spain",
+      "height": "184 cm",
+      "weight": "72 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/1841.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 18,
+      "lineups": 16,
+      "minutes": 1414,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.082352",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 2,
+      "out": 3,
+      "bench": 19
+      },
+      "shots": {
+      "total": 2,
+      "on": 1
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 1062,
+      "key": 2,
+      "accuracy": 52
+      },
+      "tackles": {
+      "total": 17,
+      "blocks": 12,
+      "interceptions": 11
+      },
+      "duels": {
+      "total": 62,
+      "won": 31
+      },
+      "dribbles": {
+      "attempts": 3,
+      "success": 2,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 4,
+      "committed": 3
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 4,
+      "lineups": 2,
+      "minutes": 212,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.600000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 2,
+      "out": 0,
+      "bench": 3
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 190,
+      "key": null,
+      "accuracy": 42
+      },
+      "tackles": {
+      "total": 1,
+      "blocks": 1,
+      "interceptions": 2
+      },
+      "duels": {
+      "total": 12,
+      "won": 6
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 2,
+      "committed": 2
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 1843,
+      "name": "J. Lukaku",
+      "firstname": "Jordan Zacharie",
+      "lastname": "Lukaku Menama Mokelenge",
+      "age": 29,
+      "birth": {
+      "date": "1994-07-25",
+      "place": "Antwerpen",
+      "country": "Belgium"
+      },
+      "nationality": "Belgium",
+      "height": "177 cm",
+      "weight": "86 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/1843.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": null,
+      "name": "Club Friendlies",
+      "country": null,
+      "logo": null,
+      "flag": null,
+      "season": "2022"
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": null,
+      "name": "Club Friendlies",
+      "country": null,
+      "logo": null,
+      "flag": null,
+      "season": "2022"
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 1846,
+      "name": "Ş. Radu",
+      "firstname": "Ştefan Daniel",
+      "lastname": "Radu",
+      "age": 37,
+      "birth": {
+      "date": "1986-10-22",
+      "place": "București",
+      "country": "Romania"
+      },
+      "nationality": "Romania",
+      "height": "183 cm",
+      "weight": "79 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/1846.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 1,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 0,
+      "bench": 33
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 6,
+      "key": null,
+      "accuracy": 6
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 2,
+      "lineups": 1,
+      "minutes": 66,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.500000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 1,
+      "bench": 5
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 61,
+      "key": null,
+      "accuracy": 26
+      },
+      "tackles": {
+      "total": 1,
+      "blocks": 1,
+      "interceptions": 2
+      },
+      "duels": {
+      "total": 4,
+      "won": 1
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": 1
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 1858,
+      "name": "Lucas Leiva",
+      "firstname": "Lucas",
+      "lastname": "Pezzini Leiva",
+      "age": 36,
+      "birth": {
+      "date": "1987-01-09",
+      "place": "Dourados",
+      "country": "Brazil"
+      },
+      "nationality": "Brazil",
+      "height": "179 cm",
+      "weight": "74 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/1858.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": null,
+      "name": "Club Friendlies",
+      "country": null,
+      "logo": null,
+      "flag": null,
+      "season": "2022"
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Midfielder",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 30554,
+      "name": "L. Pellegrini",
+      "firstname": "Luca",
+      "lastname": "Pellegrini",
+      "age": 24,
+      "birth": {
+      "date": "1999-03-07",
+      "place": "Roma",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "178 cm",
+      "weight": "72 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/30554.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 7,
+      "lineups": 1,
+      "minutes": 174,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.557142",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 6,
+      "out": 0,
+      "bench": 16
+      },
+      "shots": {
+      "total": 3,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 128,
+      "key": 4,
+      "accuracy": 15
+      },
+      "tackles": {
+      "total": 1,
+      "blocks": null,
+      "interceptions": 7
+      },
+      "duels": {
+      "total": 29,
+      "won": 8
+      },
+      "dribbles": {
+      "attempts": 7,
+      "success": 3,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 1,
+      "committed": 5
+      },
+      "cards": {
+      "yellow": 3,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31037,
+      "name": "I. Provedel",
+      "firstname": "Ivan",
+      "lastname": "Provedel",
+      "age": 29,
+      "birth": {
+      "date": "1994-03-17",
+      "place": "Udine",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "192 cm",
+      "weight": "82 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/31037.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 38,
+      "lineups": 37,
+      "minutes": 3412,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "7.094736",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 0,
+      "bench": 1
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 30,
+      "assists": null,
+      "saves": 100
+      },
+      "passes": {
+      "total": 1153,
+      "key": 1,
+      "accuracy": 23
+      },
+      "tackles": {
+      "total": 1,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 11,
+      "won": 10
+      },
+      "dribbles": {
+      "attempts": 1,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 5,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 1
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 6,
+      "lineups": 6,
+      "minutes": 540,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "6.583333",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 11,
+      "assists": null,
+      "saves": 17
+      },
+      "passes": {
+      "total": 217,
+      "key": null,
+      "accuracy": 29
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 3,
+      "won": 3
+      },
+      "dribbles": {
+      "attempts": 1,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 2,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31099,
+      "name": "N. Casale",
+      "firstname": "Nicolò",
+      "lastname": "Casale",
+      "age": 25,
+      "birth": {
+      "date": "1998-02-14",
+      "place": "Negrar",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "191 cm",
+      "weight": "84 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/31099.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 29,
+      "lineups": 27,
+      "minutes": 2437,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.968965",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 2,
+      "out": 2,
+      "bench": 8
+      },
+      "shots": {
+      "total": 7,
+      "on": 2
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 1609,
+      "key": 4,
+      "accuracy": 51
+      },
+      "tackles": {
+      "total": 42,
+      "blocks": 17,
+      "interceptions": 18
+      },
+      "duels": {
+      "total": 158,
+      "won": 94
+      },
+      "dribbles": {
+      "attempts": 3,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 7,
+      "committed": 22
+      },
+      "cards": {
+      "yellow": 6,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 2,
+      "lineups": 1,
+      "minutes": 98,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.700000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 0,
+      "bench": 4
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 84,
+      "key": null,
+      "accuracy": 39
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": 1
+      },
+      "duels": {
+      "total": 4,
+      "won": 1
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 1,
+      "committed": 2
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31667,
+      "name": "D. Anderson",
+      "firstname": "Djavan Lorenzo",
+      "lastname": "Anderson",
+      "age": 28,
+      "birth": {
+      "date": "1995-04-21",
+      "place": "Amsterdam",
+      "country": "Netherlands"
+      },
+      "nationality": "Suriname",
+      "height": "174 cm",
+      "weight": "70 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/31667.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 1
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31678,
+      "name": "J. Akpa Akpro",
+      "firstname": "Jean-Daniel Dave",
+      "lastname": "Lewis Akpa Akpro",
+      "age": 31,
+      "birth": {
+      "date": "1992-10-11",
+      "place": "Toulouse",
+      "country": "France"
+      },
+      "nationality": "Côte d'Ivoire",
+      "height": "180 cm",
+      "weight": "70 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/31678.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "6.758333",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": 10,
+      "on": 5
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 392,
+      "key": 6,
+      "accuracy": 12
+      },
+      "tackles": {
+      "total": 54,
+      "blocks": 4,
+      "interceptions": 13
+      },
+      "duels": {
+      "total": 216,
+      "won": 118
+      },
+      "dribbles": {
+      "attempts": 49,
+      "success": 30,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 18,
+      "committed": 31
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Midfielder",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31775,
+      "name": "M. Adamonis",
+      "firstname": "Marius",
+      "lastname": "Adamonis",
+      "age": 26,
+      "birth": {
+      "date": "1997-05-13",
+      "place": "Panevėžys",
+      "country": "Lithuania"
+      },
+      "nationality": "Lithuania",
+      "height": "187 cm",
+      "weight": "80 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/31775.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 38
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 1
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 45798,
+      "name": "D. Kamenović",
+      "firstname": "Dimitrije",
+      "lastname": "Kamenović",
+      "age": 23,
+      "birth": {
+      "date": "2000-07-16",
+      "place": "Pirot",
+      "country": "Serbia"
+      },
+      "nationality": "Serbia",
+      "height": "188 cm",
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/45798.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 13
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-3.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 342651,
+      "name": "R. Floriani",
+      "firstname": "Romano",
+      "lastname": "Floriani",
+      "age": 20,
+      "birth": {
+      "date": "2003-01-27",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/342651.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 2
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 343570,
+      "name": "F. Magro",
+      "firstname": "Federico",
+      "lastname": "Magro",
+      "age": 18,
+      "birth": {
+      "date": "2005-01-10",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "189 cm",
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/343570.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-1.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 2
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      },
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 3,
+      "name": "UEFA Europa League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/3.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 6
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 393946,
+      "name": "B. Maliszewski",
+      "firstname": "Bartłomiej",
+      "lastname": "Maliszewski",
+      "age": 19,
+      "birth": {
+      "date": "2004-02-12",
+      "place": null,
+      "country": "Poland"
+      },
+      "nationality": "Poland",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/393946.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-2.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": null,
+      "lineups": null,
+      "minutes": null,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": null,
+      "out": null,
+      "bench": null
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": null,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": null,
+      "yellowred": null,
+      "red": null
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 408625,
+      "name": "D. Renzetti",
+      "firstname": "Davide",
+      "lastname": "Renzetti",
+      "age": 17,
+      "birth": {
+      "date": "2006-06-09",
+      "place": "Rome",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/408625.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": null,
+      "lineups": null,
+      "minutes": null,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": null,
+      "out": null,
+      "bench": null
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": null,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": null,
+      "yellowred": null,
+      "red": null
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 408626,
+      "name": "F. Ruggeri",
+      "firstname": "Fabio Andrea",
+      "lastname": "Ruggeri",
+      "age": 19,
+      "birth": {
+      "date": "2004-12-13",
+      "place": "Roma",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "169 cm",
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/408626.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 487,
+      "name": "Lazio",
+      "logo": "https://media-3.api-sports.io/football/teams/487.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 1
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      }
+      ]
+    },
+    {
+      "get": "players",
+      "parameters": {
+      "season": "2022",
+      "team": "490"
+      },
+      "errors": [
+      ],
+      "results": 20,
+      "paging": {
+      "current": 1,
+      "total": 3
+      },
+      "response": [
+      {
+      "player": {
+      "id": 200,
+      "name": "G. Zappa",
+      "firstname": "Gabriele",
+      "lastname": "Zappa",
+      "age": 24,
+      "birth": {
+      "date": "1999-12-22",
+      "place": "Monza",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "180 cm",
+      "weight": "78 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/200.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-2.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 34,
+      "lineups": 32,
+      "minutes": 2752,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.887878",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 2,
+      "out": 12,
+      "bench": 9
+      },
+      "shots": {
+      "total": 10,
+      "on": 7
+      },
+      "goals": {
+      "total": 3,
+      "conceded": 0,
+      "assists": 2,
+      "saves": null
+      },
+      "passes": {
+      "total": 1414,
+      "key": 25,
+      "accuracy": 33
+      },
+      "tackles": {
+      "total": 61,
+      "blocks": 11,
+      "interceptions": 34
+      },
+      "duels": {
+      "total": 250,
+      "won": 122
+      },
+      "dribbles": {
+      "attempts": 37,
+      "success": 15,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 22,
+      "committed": 32
+      },
+      "cards": {
+      "yellow": 8,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 18890,
+      "name": "A. Barreca",
+      "firstname": "Antonio",
+      "lastname": "Barreca",
+      "age": 28,
+      "birth": {
+      "date": "1995-03-18",
+      "place": "Torino",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "183 cm",
+      "weight": "70 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/18890.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-1.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 23,
+      "lineups": 8,
+      "minutes": 879,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.460869",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 15,
+      "out": 6,
+      "bench": 27
+      },
+      "shots": {
+      "total": 1,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 359,
+      "key": 8,
+      "accuracy": 13
+      },
+      "tackles": {
+      "total": 14,
+      "blocks": 2,
+      "interceptions": 4
+      },
+      "duels": {
+      "total": 68,
+      "won": 29
+      },
+      "dribbles": {
+      "attempts": 11,
+      "success": 4,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 3,
+      "committed": 11
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 30545,
+      "name": "S. Aresti",
+      "firstname": "Simone",
+      "lastname": "Aresti",
+      "age": 37,
+      "birth": {
+      "date": "1986-03-15",
+      "place": "Carbonia",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "187 cm",
+      "weight": "72 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/30545.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-2.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 43
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 3
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 30824,
+      "name": "E. Capradossi",
+      "firstname": "Elio",
+      "lastname": "Capradossi",
+      "age": 27,
+      "birth": {
+      "date": "1996-03-11",
+      "place": "Kampala",
+      "country": "Uganda"
+      },
+      "nationality": "Italy",
+      "height": "185 cm",
+      "weight": "78 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/30824.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-1.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 16,
+      "lineups": 13,
+      "minutes": 1134,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.881250",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 3,
+      "out": 4,
+      "bench": 12
+      },
+      "shots": {
+      "total": 7,
+      "on": 1
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 688,
+      "key": 3,
+      "accuracy": 40
+      },
+      "tackles": {
+      "total": 25,
+      "blocks": 11,
+      "interceptions": 20
+      },
+      "duels": {
+      "total": 99,
+      "won": 55
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 4,
+      "committed": 14
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31073,
+      "name": "E. Goldaniga",
+      "firstname": "Edoardo",
+      "lastname": "Goldaniga",
+      "age": 30,
+      "birth": {
+      "date": "1993-11-02",
+      "place": "Milano",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "193 cm",
+      "weight": "87 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/31073.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-2.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 22,
+      "lineups": 17,
+      "minutes": 1577,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.842857",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 5,
+      "out": 4,
+      "bench": 17
+      },
+      "shots": {
+      "total": 7,
+      "on": 1
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 859,
+      "key": 3,
+      "accuracy": 34
+      },
+      "tackles": {
+      "total": 16,
+      "blocks": 7,
+      "interceptions": 33
+      },
+      "duels": {
+      "total": 125,
+      "won": 67
+      },
+      "dribbles": {
+      "attempts": 2,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 15,
+      "committed": 18
+      },
+      "cards": {
+      "yellow": 5,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31601,
+      "name": "B. Radunović",
+      "firstname": "Boris",
+      "lastname": "Radunović",
+      "age": 27,
+      "birth": {
+      "date": "1996-05-26",
+      "place": "Beograd",
+      "country": "Serbia"
+      },
+      "nationality": "Serbia",
+      "height": "194 cm",
+      "weight": "84 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/31601.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-3.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 43,
+      "lineups": 43,
+      "minutes": 3870,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "7.083333",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 38,
+      "assists": null,
+      "saves": 113
+      },
+      "passes": {
+      "total": 976,
+      "key": null,
+      "accuracy": 16
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": 3
+      },
+      "duels": {
+      "total": 18,
+      "won": 16
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 6,
+      "committed": 1
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 3
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31751,
+      "name": "G. Altare",
+      "firstname": "Giorgio",
+      "lastname": "Altare",
+      "age": 25,
+      "birth": {
+      "date": "1998-08-09",
+      "place": "Bergamo",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "188 cm",
+      "weight": "75 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/31751.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-1.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 30,
+      "lineups": 24,
+      "minutes": 2224,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.000000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 6,
+      "out": 3,
+      "bench": 16
+      },
+      "shots": {
+      "total": 16,
+      "on": 7
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 1355,
+      "key": 12,
+      "accuracy": 37
+      },
+      "tackles": {
+      "total": 40,
+      "blocks": 16,
+      "interceptions": 39
+      },
+      "duels": {
+      "total": 215,
+      "won": 126
+      },
+      "dribbles": {
+      "attempts": 2,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 11,
+      "committed": 33
+      },
+      "cards": {
+      "yellow": 6,
+      "yellowred": 1,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 32034,
+      "name": "A. Dossena",
+      "firstname": "Alberto",
+      "lastname": "Dossena",
+      "age": 25,
+      "birth": {
+      "date": "1998-10-13",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/32034.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-1.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 27,
+      "lineups": 23,
+      "minutes": 1990,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.164000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 4,
+      "out": 7,
+      "bench": 14
+      },
+      "shots": {
+      "total": 15,
+      "on": 8
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 1064,
+      "key": 4,
+      "accuracy": 36
+      },
+      "tackles": {
+      "total": 37,
+      "blocks": 17,
+      "interceptions": 30
+      },
+      "duels": {
+      "total": 242,
+      "won": 154
+      },
+      "dribbles": {
+      "attempts": 1,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 32,
+      "committed": 28
+      },
+      "cards": {
+      "yellow": 8,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 40582,
+      "name": "S. Walukiewicz",
+      "firstname": "Sebastian Wiktor",
+      "lastname": "Walukiewicz",
+      "age": 23,
+      "birth": {
+      "date": "2000-04-05",
+      "place": "Gorzów Wielkopolski",
+      "country": "Poland"
+      },
+      "nationality": "Poland",
+      "height": "188 cm",
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/40582.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-3.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 56207,
+      "name": "Paulo Azzi",
+      "firstname": "Paulo Daniel",
+      "lastname": "Dentello Azzi",
+      "age": 29,
+      "birth": {
+      "date": "1994-07-15",
+      "place": "São Paulo",
+      "country": "Brazil"
+      },
+      "nationality": "Brazil",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/56207.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-1.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 21,
+      "lineups": 17,
+      "minutes": 1529,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.805000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 4,
+      "out": 8,
+      "bench": 6
+      },
+      "shots": {
+      "total": 21,
+      "on": 4
+      },
+      "goals": {
+      "total": 2,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 567,
+      "key": 6,
+      "accuracy": 19
+      },
+      "tackles": {
+      "total": 39,
+      "blocks": 4,
+      "interceptions": 16
+      },
+      "duels": {
+      "total": 181,
+      "won": 93
+      },
+      "dribbles": {
+      "attempts": 61,
+      "success": 29,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 11,
+      "committed": 20
+      },
+      "cards": {
+      "yellow": 4,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 56316,
+      "name": "L. Belloni",
+      "firstname": "Luca",
+      "lastname": "Belloni",
+      "age": 19,
+      "birth": {
+      "date": "2003-05-08",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/56316.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-2.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": null,
+      "lineups": null,
+      "minutes": null,
+      "number": null,
+      "position": "Midfielder",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": null,
+      "out": null,
+      "bench": null
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": null,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": null,
+      "yellowred": null,
+      "red": null
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 135863,
+      "name": "G. Ciocci",
+      "firstname": "Giuseppe",
+      "lastname": "Ciocci",
+      "age": 21,
+      "birth": {
+      "date": "2002-01-24",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/135863.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-1.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 14
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 2
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 286473,
+      "name": "F. Carboni",
+      "firstname": "Franco Ezequiel",
+      "lastname": "Carboni",
+      "age": 20,
+      "birth": {
+      "date": "2003-04-04",
+      "place": "Buenos Aires",
+      "country": "Argentina"
+      },
+      "nationality": "Argentina",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/286473.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-3.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 13,
+      "lineups": 5,
+      "minutes": 458,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.550000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 8,
+      "out": 4,
+      "bench": 16
+      },
+      "shots": {
+      "total": 2,
+      "on": 2
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 211,
+      "key": 2,
+      "accuracy": 12
+      },
+      "tackles": {
+      "total": 10,
+      "blocks": null,
+      "interceptions": 2
+      },
+      "duels": {
+      "total": 59,
+      "won": 28
+      },
+      "dribbles": {
+      "attempts": 12,
+      "success": 5,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 2,
+      "committed": 9
+      },
+      "cards": {
+      "yellow": 3,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 321744,
+      "name": "A. Obert",
+      "firstname": "Adam",
+      "lastname": "Obert",
+      "age": 21,
+      "birth": {
+      "date": "2002-08-23",
+      "place": "Bratislava",
+      "country": "Slovakia"
+      },
+      "nationality": "Slovakia",
+      "height": "186 cm",
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/321744.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-2.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 33,
+      "lineups": 26,
+      "minutes": 2311,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.871875",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 7,
+      "out": 8,
+      "bench": 15
+      },
+      "shots": {
+      "total": 12,
+      "on": 2
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 1333,
+      "key": 21,
+      "accuracy": 34
+      },
+      "tackles": {
+      "total": 20,
+      "blocks": 14,
+      "interceptions": 26
+      },
+      "duels": {
+      "total": 189,
+      "won": 106
+      },
+      "dribbles": {
+      "attempts": 18,
+      "success": 11,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 10,
+      "committed": 22
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 1,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 330723,
+      "name": "E. Fusco",
+      "firstname": "Eugenio",
+      "lastname": "Fusco",
+      "age": 19,
+      "birth": {
+      "date": "2003-03-19",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/330723.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-3.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": null,
+      "lineups": null,
+      "minutes": null,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": null,
+      "out": null,
+      "bench": null
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": null,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": null,
+      "yellowred": null,
+      "red": null
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 333033,
+      "name": "D. Veroli",
+      "firstname": "Davide",
+      "lastname": "Veroli",
+      "age": 20,
+      "birth": {
+      "date": "2003-01-29",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/333033.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-1.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 1
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 342050,
+      "name": "L. Palomba",
+      "firstname": "Luigi",
+      "lastname": "Palomba",
+      "age": 20,
+      "birth": {
+      "date": "2003-04-17",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/342050.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-2.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 2
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 342051,
+      "name": "F. Zallu",
+      "firstname": "Francesco",
+      "lastname": "Zallu",
+      "age": 20,
+      "birth": {
+      "date": "2003-04-29",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/342051.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-1.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 1
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 342311,
+      "name": "V. Iliev",
+      "firstname": "Velizar-Iliya",
+      "lastname": "Svetozarov Iliev",
+      "age": 18,
+      "birth": {
+      "date": "2005-07-20",
+      "place": null,
+      "country": "Bulgaria"
+      },
+      "nationality": "Bulgaria",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/342311.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-2.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 1
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 351324,
+      "name": "E. Lolic",
+      "firstname": "Eldin",
+      "lastname": "Lolic",
+      "age": 19,
+      "birth": {
+      "date": "2004-05-15",
+      "place": null,
+      "country": "Bosnia and Herzegovina"
+      },
+      "nationality": "Bosnia and Herzegovina",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/351324.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 490,
+      "name": "Cagliari",
+      "logo": "https://media-3.api-sports.io/football/teams/490.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 14
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      }
+      ]
+      }
+      ]
+    },
+    {
+      "get": "players",
+      "parameters": {
+      "season": "2022",
+      "team": "492"
+      },
+      "errors": [
+      ],
+      "results": 20,
+      "paging": {
+      "current": 1,
+      "total": 2
+      },
+      "response": [
+      {
+      "player": {
+      "id": 312,
+      "name": "A. Meret",
+      "firstname": "Alex",
+      "lastname": "Meret",
+      "age": 26,
+      "birth": {
+      "date": "1997-03-22",
+      "place": "Udine",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "190 cm",
+      "weight": "82 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/312.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 34,
+      "lineups": 34,
+      "minutes": 3060,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "6.954545",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 4
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 23,
+      "assists": null,
+      "saves": 67
+      },
+      "passes": {
+      "total": 778,
+      "key": null,
+      "accuracy": 20
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 5,
+      "won": 5
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 2
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 10,
+      "lineups": 10,
+      "minutes": 900,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "7.050000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 8,
+      "assists": null,
+      "saves": 22
+      },
+      "passes": {
+      "total": 267,
+      "key": null,
+      "accuracy": 23
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 7,
+      "won": 7
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 3,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 3
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 322,
+      "name": "Mário Rui",
+      "firstname": "Mário Rui",
+      "lastname": "Silva Duarte",
+      "age": 32,
+      "birth": {
+      "date": "1991-05-27",
+      "place": "Sines",
+      "country": "Portugal"
+      },
+      "nationality": "Portugal",
+      "height": "170 cm",
+      "weight": "67 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/322.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 22,
+      "lineups": 21,
+      "minutes": 1762,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.280952",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 13,
+      "bench": 9
+      },
+      "shots": {
+      "total": 9,
+      "on": 4
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 6,
+      "saves": null
+      },
+      "passes": {
+      "total": 1364,
+      "key": 46,
+      "accuracy": 54
+      },
+      "tackles": {
+      "total": 34,
+      "blocks": 4,
+      "interceptions": 15
+      },
+      "duels": {
+      "total": 153,
+      "won": 81
+      },
+      "dribbles": {
+      "attempts": 10,
+      "success": 5,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 29,
+      "committed": 18
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 1
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 6,
+      "lineups": 5,
+      "minutes": 388,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.866666",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 3,
+      "bench": 5
+      },
+      "shots": {
+      "total": 4,
+      "on": 1
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 259,
+      "key": 6,
+      "accuracy": 35
+      },
+      "tackles": {
+      "total": 6,
+      "blocks": 2,
+      "interceptions": 7
+      },
+      "duels": {
+      "total": 44,
+      "won": 18
+      },
+      "dribbles": {
+      "attempts": 5,
+      "success": 3,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 5,
+      "committed": 7
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 323,
+      "name": "K. Zedadka",
+      "firstname": "Karim",
+      "lastname": "Zedadka",
+      "age": 23,
+      "birth": {
+      "date": "2000-06-09",
+      "place": "Pertuis",
+      "country": "France"
+      },
+      "nationality": "France",
+      "height": "182 cm",
+      "weight": "67 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/323.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 3,
+      "lineups": 0,
+      "minutes": 18,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "6.700000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 3,
+      "out": 0,
+      "bench": 31
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 12,
+      "key": null,
+      "accuracy": 2
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 6,
+      "won": 5
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 4,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Midfielder",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 325,
+      "name": "G. Gaetano",
+      "firstname": "Gianluca",
+      "lastname": "Gaetano",
+      "age": 23,
+      "birth": {
+      "date": "2000-05-05",
+      "place": "Cimitile",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "181 cm",
+      "weight": "71 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/325.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 8,
+      "lineups": 0,
+      "minutes": 68,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "6.550000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 8,
+      "out": 0,
+      "bench": 33
+      },
+      "shots": {
+      "total": 5,
+      "on": 5
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 59,
+      "key": 1,
+      "accuracy": 6
+      },
+      "tackles": {
+      "total": 5,
+      "blocks": null,
+      "interceptions": 1
+      },
+      "duels": {
+      "total": 13,
+      "won": 6
+      },
+      "dribbles": {
+      "attempts": 2,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 1,
+      "committed": 2
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 3,
+      "lineups": 0,
+      "minutes": 28,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "6.450000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 3,
+      "out": 0,
+      "bench": 10
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 36,
+      "key": null,
+      "accuracy": 10
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 5,
+      "won": 2
+      },
+      "dribbles": {
+      "attempts": 2,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": 2
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 662,
+      "name": "T. Ndombélé",
+      "firstname": "Tanguy",
+      "lastname": "Ndombélé Alvaro",
+      "age": 27,
+      "birth": {
+      "date": "1996-12-28",
+      "place": "Longjumeau",
+      "country": "France"
+      },
+      "nationality": "France",
+      "height": "181 cm",
+      "weight": "76 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/662.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 30,
+      "lineups": 8,
+      "minutes": 789,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "6.569230",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 22,
+      "out": 8,
+      "bench": 28
+      },
+      "shots": {
+      "total": 8,
+      "on": 2
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 549,
+      "key": 9,
+      "accuracy": 17
+      },
+      "tackles": {
+      "total": 13,
+      "blocks": null,
+      "interceptions": 7
+      },
+      "duels": {
+      "total": 111,
+      "won": 62
+      },
+      "dribbles": {
+      "attempts": 31,
+      "success": 19,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 23,
+      "committed": 13
+      },
+      "cards": {
+      "yellow": 5,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 9,
+      "lineups": 3,
+      "minutes": 368,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "7.188888",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 6,
+      "out": 2,
+      "bench": 7
+      },
+      "shots": {
+      "total": 6,
+      "on": 3
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 264,
+      "key": 9,
+      "accuracy": 25
+      },
+      "tackles": {
+      "total": 8,
+      "blocks": 1,
+      "interceptions": 5
+      },
+      "duels": {
+      "total": 52,
+      "won": 35
+      },
+      "dribbles": {
+      "attempts": 15,
+      "success": 11,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 9,
+      "committed": 2
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 774,
+      "name": "Juan Jesus",
+      "firstname": "Juan Guilherme",
+      "lastname": "Nunes Jesus",
+      "age": 32,
+      "birth": {
+      "date": "1991-06-10",
+      "place": "Belo Horizonte",
+      "country": "Brazil"
+      },
+      "nationality": "Brazil",
+      "height": "185 cm",
+      "weight": "83 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/774.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 15,
+      "lineups": 10,
+      "minutes": 929,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.940000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 5,
+      "out": 1,
+      "bench": 27
+      },
+      "shots": {
+      "total": 3,
+      "on": 1
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 734,
+      "key": 2,
+      "accuracy": 44
+      },
+      "tackles": {
+      "total": 16,
+      "blocks": 11,
+      "interceptions": 10
+      },
+      "duels": {
+      "total": 73,
+      "won": 51
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 5,
+      "committed": 10
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 3,
+      "lineups": 2,
+      "minutes": 204,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.600000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 0,
+      "bench": 8
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 150,
+      "key": null,
+      "accuracy": 45
+      },
+      "tackles": {
+      "total": 3,
+      "blocks": 5,
+      "interceptions": 1
+      },
+      "duels": {
+      "total": 15,
+      "won": 4
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": 4
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 1151,
+      "name": "D. Demme",
+      "firstname": "Diego",
+      "lastname": "Demme",
+      "age": 32,
+      "birth": {
+      "date": "1991-11-21",
+      "place": "Herford",
+      "country": "Germany"
+      },
+      "nationality": "Germany",
+      "height": "172 cm",
+      "weight": "71 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/1151.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 7,
+      "lineups": 2,
+      "minutes": 143,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "6.616666",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 5,
+      "out": 2,
+      "bench": 29
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 191,
+      "key": 1,
+      "accuracy": 25
+      },
+      "tackles": {
+      "total": 1,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 17,
+      "won": 8
+      },
+      "dribbles": {
+      "attempts": 3,
+      "success": 2,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 3,
+      "committed": 2
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Midfielder",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 1314,
+      "name": "A. Rrahmani",
+      "firstname": "Amir",
+      "lastname": "Rrahmani",
+      "age": 29,
+      "birth": {
+      "date": "1994-02-24",
+      "place": "Prishtinë",
+      "country": "Kosovo"
+      },
+      "nationality": "Kosovo",
+      "height": "192 cm",
+      "weight": "87 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/1314.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 29,
+      "lineups": 27,
+      "minutes": 2448,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.200000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 2,
+      "out": 2,
+      "bench": 5
+      },
+      "shots": {
+      "total": 19,
+      "on": 3
+      },
+      "goals": {
+      "total": 2,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 2037,
+      "key": 12,
+      "accuracy": 69
+      },
+      "tackles": {
+      "total": 33,
+      "blocks": 20,
+      "interceptions": 13
+      },
+      "duels": {
+      "total": 186,
+      "won": 113
+      },
+      "dribbles": {
+      "attempts": 6,
+      "success": 3,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 11,
+      "committed": 20
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 7,
+      "lineups": 7,
+      "minutes": 614,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.100000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 1,
+      "bench": 0
+      },
+      "shots": {
+      "total": 2,
+      "on": 1
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 489,
+      "key": 1,
+      "accuracy": 62
+      },
+      "tackles": {
+      "total": 9,
+      "blocks": 4,
+      "interceptions": 2
+      },
+      "duels": {
+      "total": 56,
+      "won": 31
+      },
+      "dribbles": {
+      "attempts": 1,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 2,
+      "committed": 7
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 2780,
+      "name": "V. Osimhen",
+      "firstname": "Victor James",
+      "lastname": "Osimhen",
+      "age": 25,
+      "birth": {
+      "date": "1998-12-29",
+      "place": "Lagos",
+      "country": "Nigeria"
+      },
+      "nationality": "Nigeria",
+      "height": "185 cm",
+      "weight": "78 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/2780.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 32,
+      "lineups": 30,
+      "minutes": 2582,
+      "number": null,
+      "position": "Attacker",
+      "rating": "7.181250",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 2,
+      "out": 17,
+      "bench": 2
+      },
+      "shots": {
+      "total": 105,
+      "on": 55
+      },
+      "goals": {
+      "total": 26,
+      "conceded": 0,
+      "assists": 4,
+      "saves": null
+      },
+      "passes": {
+      "total": 372,
+      "key": 34,
+      "accuracy": 8
+      },
+      "tackles": {
+      "total": 10,
+      "blocks": 1,
+      "interceptions": 6
+      },
+      "duels": {
+      "total": 317,
+      "won": 137
+      },
+      "dribbles": {
+      "attempts": 60,
+      "success": 24,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 38,
+      "committed": 40
+      },
+      "cards": {
+      "yellow": 4,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 2,
+      "missed": 1,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 6,
+      "lineups": 5,
+      "minutes": 423,
+      "number": null,
+      "position": "Attacker",
+      "rating": "7.250000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 4,
+      "bench": 2
+      },
+      "shots": {
+      "total": 14,
+      "on": 8
+      },
+      "goals": {
+      "total": 5,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 48,
+      "key": 3,
+      "accuracy": 5
+      },
+      "tackles": {
+      "total": 5,
+      "blocks": null,
+      "interceptions": 1
+      },
+      "duels": {
+      "total": 59,
+      "won": 36
+      },
+      "dribbles": {
+      "attempts": 10,
+      "success": 5,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 10,
+      "committed": 5
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 1,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 2897,
+      "name": "Kim Min-Jae",
+      "firstname": "Min-Jae",
+      "lastname": "Kim",
+      "age": 27,
+      "birth": {
+      "date": "1996-11-15",
+      "place": "Tongyeong",
+      "country": "Korea Republic"
+      },
+      "nationality": "Korea Republic",
+      "height": "190 cm",
+      "weight": "84 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/2897.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 35,
+      "lineups": 35,
+      "minutes": 3055,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.214705",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 5,
+      "bench": 2
+      },
+      "shots": {
+      "total": 7,
+      "on": 4
+      },
+      "goals": {
+      "total": 2,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 2694,
+      "key": 9,
+      "accuracy": 72
+      },
+      "tackles": {
+      "total": 51,
+      "blocks": 26,
+      "interceptions": 40
+      },
+      "duels": {
+      "total": 240,
+      "won": 144
+      },
+      "dribbles": {
+      "attempts": 5,
+      "success": 2,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 7,
+      "committed": 30
+      },
+      "cards": {
+      "yellow": 5,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 9,
+      "lineups": 9,
+      "minutes": 786,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.177777",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 1,
+      "bench": 0
+      },
+      "shots": {
+      "total": 1,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 611,
+      "key": 1,
+      "accuracy": 59
+      },
+      "tackles": {
+      "total": 12,
+      "blocks": 8,
+      "interceptions": 22
+      },
+      "duels": {
+      "total": 68,
+      "won": 47
+      },
+      "dribbles": {
+      "attempts": 2,
+      "success": 2,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 1,
+      "committed": 9
+      },
+      "cards": {
+      "yellow": 3,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 3406,
+      "name": "A. Zambo Anguissa",
+      "firstname": "André-Frank",
+      "lastname": "Zambo Anguissa",
+      "age": 28,
+      "birth": {
+      "date": "1995-11-16",
+      "place": "Yaoundé",
+      "country": "Cameroon"
+      },
+      "nationality": "Cameroon",
+      "height": "184 cm",
+      "weight": "78 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/3406.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 36,
+      "lineups": 36,
+      "minutes": 3062,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "6.994285",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 12,
+      "bench": 0
+      },
+      "shots": {
+      "total": 39,
+      "on": 15
+      },
+      "goals": {
+      "total": 3,
+      "conceded": 0,
+      "assists": 5,
+      "saves": null
+      },
+      "passes": {
+      "total": 2145,
+      "key": 32,
+      "accuracy": 54
+      },
+      "tackles": {
+      "total": 52,
+      "blocks": 4,
+      "interceptions": 47
+      },
+      "duels": {
+      "total": 373,
+      "won": 179
+      },
+      "dribbles": {
+      "attempts": 65,
+      "success": 33,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 47,
+      "committed": 43
+      },
+      "cards": {
+      "yellow": 3,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 8,
+      "lineups": 8,
+      "minutes": 653,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "7.162500",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 2,
+      "bench": 1
+      },
+      "shots": {
+      "total": 4,
+      "on": 2
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": 3,
+      "saves": null
+      },
+      "passes": {
+      "total": 400,
+      "key": 10,
+      "accuracy": 42
+      },
+      "tackles": {
+      "total": 14,
+      "blocks": 1,
+      "interceptions": 14
+      },
+      "duels": {
+      "total": 97,
+      "won": 52
+      },
+      "dribbles": {
+      "attempts": 21,
+      "success": 14,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 16,
+      "committed": 17
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 1,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-3.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "7.162500",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": 4,
+      "on": 2
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 3,
+      "saves": null
+      },
+      "passes": {
+      "total": 400,
+      "key": 10,
+      "accuracy": 42
+      },
+      "tackles": {
+      "total": 14,
+      "blocks": 1,
+      "interceptions": 14
+      },
+      "duels": {
+      "total": 97,
+      "won": 52
+      },
+      "dribbles": {
+      "attempts": 21,
+      "success": 14,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 16,
+      "committed": 17
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 30418,
+      "name": "P. Gollini",
+      "firstname": "Pierluigi",
+      "lastname": "Gollini",
+      "age": 28,
+      "birth": {
+      "date": "1995-03-18",
+      "place": "Bologna",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "194 cm",
+      "weight": "94 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/30418.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 4,
+      "lineups": 4,
+      "minutes": 360,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "6.933333",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 15
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 2,
+      "assists": null,
+      "saves": 6
+      },
+      "passes": {
+      "total": 109,
+      "key": null,
+      "accuracy": 26
+      },
+      "tackles": {
+      "total": 1,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 1,
+      "won": 1
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 4
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 2
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 30495,
+      "name": "S. Sirigu",
+      "firstname": "Salvatore",
+      "lastname": "Sirigu",
+      "age": 36,
+      "birth": {
+      "date": "1987-01-12",
+      "place": "Nuoro",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "192 cm",
+      "weight": "80 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/30495.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "8.300000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 15
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": 5
+      },
+      "passes": {
+      "total": 29,
+      "key": null,
+      "accuracy": 19
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-3.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-3.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 5
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 1
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31042,
+      "name": "G. Di Lorenzo",
+      "firstname": "Giovanni",
+      "lastname": "Di Lorenzo",
+      "age": 30,
+      "birth": {
+      "date": "1993-08-04",
+      "place": "Castelnuovo Garfagnana",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "183 cm",
+      "weight": "83 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/31042.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 37,
+      "lineups": 36,
+      "minutes": 3257,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.180555",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 1,
+      "bench": 2
+      },
+      "shots": {
+      "total": 22,
+      "on": 12
+      },
+      "goals": {
+      "total": 3,
+      "conceded": 0,
+      "assists": 4,
+      "saves": null
+      },
+      "passes": {
+      "total": 2210,
+      "key": 45,
+      "accuracy": 52
+      },
+      "tackles": {
+      "total": 59,
+      "blocks": 8,
+      "interceptions": 30
+      },
+      "duels": {
+      "total": 260,
+      "won": 143
+      },
+      "dribbles": {
+      "attempts": 28,
+      "success": 11,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 35,
+      "committed": 31
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 10,
+      "lineups": 10,
+      "minutes": 890,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.390000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 2,
+      "bench": 0
+      },
+      "shots": {
+      "total": 12,
+      "on": 5
+      },
+      "goals": {
+      "total": 2,
+      "conceded": 0,
+      "assists": 2,
+      "saves": null
+      },
+      "passes": {
+      "total": 502,
+      "key": 20,
+      "accuracy": 43
+      },
+      "tackles": {
+      "total": 18,
+      "blocks": 3,
+      "interceptions": 12
+      },
+      "duels": {
+      "total": 94,
+      "won": 49
+      },
+      "dribbles": {
+      "attempts": 16,
+      "success": 8,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 9,
+      "committed": 12
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 47254,
+      "name": "M. Olivera",
+      "firstname": "Mathías",
+      "lastname": "Olivera Miramontes",
+      "age": 26,
+      "birth": {
+      "date": "1997-10-31",
+      "place": "Montevideo",
+      "country": "Uruguay"
+      },
+      "nationality": "Uruguay",
+      "height": "184 cm",
+      "weight": "78 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/47254.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 30,
+      "lineups": 17,
+      "minutes": 1634,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.796296",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 13,
+      "out": 3,
+      "bench": 19
+      },
+      "shots": {
+      "total": 7,
+      "on": 4
+      },
+      "goals": {
+      "total": 2,
+      "conceded": 0,
+      "assists": 2,
+      "saves": null
+      },
+      "passes": {
+      "total": 1185,
+      "key": 24,
+      "accuracy": 36
+      },
+      "tackles": {
+      "total": 39,
+      "blocks": 2,
+      "interceptions": 22
+      },
+      "duels": {
+      "total": 227,
+      "won": 106
+      },
+      "dribbles": {
+      "attempts": 22,
+      "success": 9,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 25,
+      "committed": 21
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 8,
+      "lineups": 5,
+      "minutes": 512,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.812500",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 3,
+      "out": 1,
+      "bench": 5
+      },
+      "shots": {
+      "total": 4,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 2,
+      "saves": null
+      },
+      "passes": {
+      "total": 332,
+      "key": 11,
+      "accuracy": 34
+      },
+      "tackles": {
+      "total": 16,
+      "blocks": null,
+      "interceptions": 5
+      },
+      "duels": {
+      "total": 64,
+      "won": 33
+      },
+      "dribbles": {
+      "attempts": 2,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 7,
+      "committed": 6
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 47439,
+      "name": "S. Lobotka",
+      "firstname": "Stanislav",
+      "lastname": "Lobotka",
+      "age": 29,
+      "birth": {
+      "date": "1994-11-25",
+      "place": "Trencin",
+      "country": "Slovakia"
+      },
+      "nationality": "Slovakia",
+      "height": "170 cm",
+      "weight": "68 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/47439.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 38,
+      "lineups": 34,
+      "minutes": 3110,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "7.072972",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 4,
+      "out": 14,
+      "bench": 4
+      },
+      "shots": {
+      "total": 7,
+      "on": 4
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 2214,
+      "key": 17,
+      "accuracy": 56
+      },
+      "tackles": {
+      "total": 79,
+      "blocks": 7,
+      "interceptions": 23
+      },
+      "duels": {
+      "total": 245,
+      "won": 160
+      },
+      "dribbles": {
+      "attempts": 23,
+      "success": 18,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 52,
+      "committed": 25
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-3.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 10,
+      "lineups": 10,
+      "minutes": 876,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "6.940000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 3,
+      "bench": 0
+      },
+      "shots": {
+      "total": 2,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 629,
+      "key": 6,
+      "accuracy": 58
+      },
+      "tackles": {
+      "total": 21,
+      "blocks": 2,
+      "interceptions": 5
+      },
+      "duels": {
+      "total": 85,
+      "won": 51
+      },
+      "dribbles": {
+      "attempts": 11,
+      "success": 6,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 24,
+      "committed": 8
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 91423,
+      "name": "D. Marfella",
+      "firstname": "Davide",
+      "lastname": "Marfella",
+      "age": 24,
+      "birth": {
+      "date": "1999-09-15",
+      "place": "Pozzuoli",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "182 cm",
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/91423.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 37
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 2
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 134434,
+      "name": "H. Idasiak",
+      "firstname": "Hubert Dawid",
+      "lastname": "Idasiak",
+      "age": 21,
+      "birth": {
+      "date": "2002-02-03",
+      "place": "Sławno",
+      "country": "Poland"
+      },
+      "nationality": "Poland",
+      "height": "185 cm",
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/134434.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 5
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-1.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-2.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 9
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 3
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 325142,
+      "name": "V. Boffelli",
+      "firstname": "Valerio",
+      "lastname": "Boffelli",
+      "age": 19,
+      "birth": {
+      "date": "2004-09-04",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "182 cm",
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/325142.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": null,
+      "lineups": null,
+      "minutes": null,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": null,
+      "out": null,
+      "bench": null
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": null,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": null,
+      "yellowred": null,
+      "red": null
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 2,
+      "name": "UEFA Champions League",
+      "country": "World",
+      "logo": "https://media-1.api-sports.io/football/leagues/2.png",
+      "flag": null,
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 1
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 341924,
+      "name": "B. Barba",
+      "firstname": "Benedetto",
+      "lastname": "Barba",
+      "age": 19,
+      "birth": {
+      "date": "2003-01-27",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/341924.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 492,
+      "name": "Napoli",
+      "logo": "https://media-2.api-sports.io/football/teams/492.png"
+      },
+      "league": {
+      "id": 135,
+      "name": "Serie A",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/135.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": null,
+      "lineups": null,
+      "minutes": null,
+      "number": null,
+      "position": "Attacker",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": null,
+      "out": null,
+      "bench": null
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": null,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": null,
+      "yellowred": null,
+      "red": null
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      }
+      ]
+    },
+    {
+      "get": "players",
+      "parameters": {
+      "season": "2022",
+      "team": "493"
+      },
+      "errors": [
+      ],
+      "results": 20,
+      "paging": {
+      "current": 1,
+      "total": 3
+      },
+      "response": [
+      {
+      "player": {
+      "id": 30430,
+      "name": "M. Varnier",
+      "firstname": "Marco",
+      "lastname": "Varnier",
+      "age": 25,
+      "birth": {
+      "date": "1998-06-08",
+      "place": "Padova",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "186 cm",
+      "weight": "82 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/30430.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-1.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 15,
+      "lineups": 11,
+      "minutes": 856,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.986666",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 4,
+      "out": 6,
+      "bench": 8
+      },
+      "shots": {
+      "total": 6,
+      "on": 2
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 562,
+      "key": 2,
+      "accuracy": 34
+      },
+      "tackles": {
+      "total": 20,
+      "blocks": 5,
+      "interceptions": 12
+      },
+      "duels": {
+      "total": 85,
+      "won": 60
+      },
+      "dribbles": {
+      "attempts": 3,
+      "success": 2,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 6,
+      "committed": 13
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 30658,
+      "name": "F. Proia",
+      "firstname": "Federico",
+      "lastname": "Proia",
+      "age": 27,
+      "birth": {
+      "date": "1996-02-04",
+      "place": "Roma",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "185 cm",
+      "weight": "80 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/30658.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-2.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 12,
+      "lineups": 8,
+      "minutes": 618,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "6.720000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 4,
+      "out": 7,
+      "bench": 7
+      },
+      "shots": {
+      "total": 6,
+      "on": 4
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 152,
+      "key": 9,
+      "accuracy": 11
+      },
+      "tackles": {
+      "total": 20,
+      "blocks": 1,
+      "interceptions": 7
+      },
+      "duels": {
+      "total": 72,
+      "won": 33
+      },
+      "dribbles": {
+      "attempts": 8,
+      "success": 4,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 5,
+      "committed": 9
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-2.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 974,
+      "name": "Serie C - Supercoppa Lega Finals",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/974.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Midfielder",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 30664,
+      "name": "M. Finotto",
+      "firstname": "Mattia",
+      "lastname": "Finotto",
+      "age": 31,
+      "birth": {
+      "date": "1992-12-28",
+      "place": "Valdobbiadene",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "186 cm",
+      "weight": "72 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/30664.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-3.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 14,
+      "lineups": 3,
+      "minutes": 361,
+      "number": null,
+      "position": "Attacker",
+      "rating": "6.562500",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 11,
+      "out": 3,
+      "bench": 16
+      },
+      "shots": {
+      "total": 12,
+      "on": 3
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 115,
+      "key": 8,
+      "accuracy": 5
+      },
+      "tackles": {
+      "total": 3,
+      "blocks": null,
+      "interceptions": 1
+      },
+      "duels": {
+      "total": 89,
+      "won": 37
+      },
+      "dribbles": {
+      "attempts": 11,
+      "success": 4,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 17,
+      "committed": 14
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 30857,
+      "name": "L. Dickmann",
+      "firstname": "Lorenzo Maria",
+      "lastname": "Dickmann",
+      "age": 27,
+      "birth": {
+      "date": "1996-09-24",
+      "place": "Milano",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "177 cm",
+      "weight": "70 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/30857.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-2.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 36,
+      "lineups": 34,
+      "minutes": 2917,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.775000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 2,
+      "out": 18,
+      "bench": 2
+      },
+      "shots": {
+      "total": 19,
+      "on": 7
+      },
+      "goals": {
+      "total": 3,
+      "conceded": 0,
+      "assists": 2,
+      "saves": null
+      },
+      "passes": {
+      "total": 1230,
+      "key": 39,
+      "accuracy": 26
+      },
+      "tackles": {
+      "total": 54,
+      "blocks": 6,
+      "interceptions": 41
+      },
+      "duels": {
+      "total": 219,
+      "won": 107
+      },
+      "dribbles": {
+      "attempts": 30,
+      "success": 8,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 33,
+      "committed": 24
+      },
+      "cards": {
+      "yellow": 7,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 30986,
+      "name": "A. Tripaldelli",
+      "firstname": "Alessandro",
+      "lastname": "Tripaldelli",
+      "age": 24,
+      "birth": {
+      "date": "1999-02-09",
+      "place": "Naples",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "182 cm",
+      "weight": "77 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/30986.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-3.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 22,
+      "lineups": 17,
+      "minutes": 1515,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.713636",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 5,
+      "out": 8,
+      "bench": 14
+      },
+      "shots": {
+      "total": 3,
+      "on": 1
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 2,
+      "saves": null
+      },
+      "passes": {
+      "total": 458,
+      "key": 13,
+      "accuracy": 15
+      },
+      "tackles": {
+      "total": 28,
+      "blocks": 5,
+      "interceptions": 18
+      },
+      "duels": {
+      "total": 180,
+      "won": 92
+      },
+      "dribbles": {
+      "attempts": 43,
+      "success": 14,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 35,
+      "committed": 15
+      },
+      "cards": {
+      "yellow": 6,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31007,
+      "name": "Gabriel Brazão",
+      "firstname": "Gabriel",
+      "lastname": "Nascimento Resende Brazão",
+      "age": 23,
+      "birth": {
+      "date": "2000-10-05",
+      "place": "Uberlândia",
+      "country": "Brazil"
+      },
+      "nationality": "Brazil",
+      "height": "192 cm",
+      "weight": "75 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/31007.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-3.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 1,
+      "lineups": 0,
+      "minutes": 18,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "5.700000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 1,
+      "out": 0,
+      "bench": 6
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 3,
+      "assists": null,
+      "saves": 1
+      },
+      "passes": {
+      "total": 6,
+      "key": null,
+      "accuracy": 3
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 1,
+      "won": 1
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 1,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31090,
+      "name": "F. Viviani",
+      "firstname": "Federico",
+      "lastname": "Viviani",
+      "age": 31,
+      "birth": {
+      "date": "1992-03-24",
+      "place": "Lecco",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "180 cm",
+      "weight": "75 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/31090.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-2.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 1,
+      "lineups": 1,
+      "minutes": 69,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "7.014285",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 1,
+      "bench": 1
+      },
+      "shots": {
+      "total": 17,
+      "on": 7
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 477,
+      "key": 11,
+      "accuracy": 28
+      },
+      "tackles": {
+      "total": 20,
+      "blocks": 1,
+      "interceptions": 17
+      },
+      "duels": {
+      "total": 81,
+      "won": 48
+      },
+      "dribbles": {
+      "attempts": 8,
+      "success": 3,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 15,
+      "committed": 12
+      },
+      "cards": {
+      "yellow": 1,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31126,
+      "name": "E. Alfonso",
+      "firstname": "Enrico",
+      "lastname": "Alfonso",
+      "age": 35,
+      "birth": {
+      "date": "1988-05-04",
+      "place": "Padova",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "191 cm",
+      "weight": "85 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/31126.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-3.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 35,
+      "lineups": 35,
+      "minutes": 3056,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "6.942857",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 3,
+      "bench": 1
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 43,
+      "assists": null,
+      "saves": 102
+      },
+      "passes": {
+      "total": 919,
+      "key": null,
+      "accuracy": 20
+      },
+      "tackles": {
+      "total": 2,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": 20,
+      "won": 14
+      },
+      "dribbles": {
+      "attempts": 1,
+      "success": 1,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 8,
+      "committed": 2
+      },
+      "cards": {
+      "yellow": 4,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 1
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31539,
+      "name": "A. Pomini",
+      "firstname": "Alberto",
+      "lastname": "Pomini",
+      "age": 42,
+      "birth": {
+      "date": "1981-03-17",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "185 cm",
+      "weight": "80 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/31539.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-3.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 3,
+      "lineups": 3,
+      "minutes": 270,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": "6.566666",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 15
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 4,
+      "assists": null,
+      "saves": 7
+      },
+      "passes": {
+      "total": 101,
+      "key": null,
+      "accuracy": 24
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": 0
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31634,
+      "name": "M. Arena",
+      "firstname": "Matteo",
+      "lastname": "Arena",
+      "age": 24,
+      "birth": {
+      "date": "1999-01-14",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/31634.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-1.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 18,
+      "lineups": 14,
+      "minutes": 1219,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.738888",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 4,
+      "out": 4,
+      "bench": 14
+      },
+      "shots": {
+      "total": 10,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 776,
+      "key": 1,
+      "accuracy": 35
+      },
+      "tackles": {
+      "total": 29,
+      "blocks": 13,
+      "interceptions": 19
+      },
+      "duels": {
+      "total": 155,
+      "won": 89
+      },
+      "dribbles": {
+      "attempts": 6,
+      "success": 4,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 11,
+      "committed": 28
+      },
+      "cards": {
+      "yellow": 5,
+      "yellowred": 0,
+      "red": 1
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31727,
+      "name": "B. Meccariello",
+      "firstname": "Biagio",
+      "lastname": "Meccariello",
+      "age": 32,
+      "birth": {
+      "date": "1991-03-27",
+      "place": "Benevento",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "188 cm",
+      "weight": "85 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/31727.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-1.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 35,
+      "lineups": 35,
+      "minutes": 3063,
+      "number": null,
+      "position": "Defender",
+      "rating": "7.157142",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 3,
+      "bench": 0
+      },
+      "shots": {
+      "total": 11,
+      "on": 5
+      },
+      "goals": {
+      "total": 2,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 2105,
+      "key": 9,
+      "accuracy": 53
+      },
+      "tackles": {
+      "total": 79,
+      "blocks": 23,
+      "interceptions": 82
+      },
+      "duels": {
+      "total": 366,
+      "won": 234
+      },
+      "dribbles": {
+      "attempts": 14,
+      "success": 8,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 42,
+      "committed": 64
+      },
+      "cards": {
+      "yellow": 10,
+      "yellowred": 0,
+      "red": 1
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 31737,
+      "name": "M. Mancosu",
+      "firstname": "Marco",
+      "lastname": "Mancosu",
+      "age": 35,
+      "birth": {
+      "date": "1988-08-22",
+      "place": "Cagliari",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "180 cm",
+      "weight": "75 kg",
+      "injured": false,
+      "photo": "https://media-3.api-sports.io/football/players/31737.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-2.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 1,
+      "lineups": 1,
+      "minutes": 81,
+      "number": null,
+      "position": "Midfielder",
+      "rating": "7.214814",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 1,
+      "bench": 0
+      },
+      "shots": {
+      "total": 34,
+      "on": 14
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 5,
+      "saves": null
+      },
+      "passes": {
+      "total": 730,
+      "key": 54,
+      "accuracy": 20
+      },
+      "tackles": {
+      "total": 21,
+      "blocks": null,
+      "interceptions": 6
+      },
+      "duels": {
+      "total": 177,
+      "won": 78
+      },
+      "dribbles": {
+      "attempts": 33,
+      "success": 18,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 19,
+      "committed": 15
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 1,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 56433,
+      "name": "R. Celia",
+      "firstname": "Raffaele",
+      "lastname": "Celia",
+      "age": 24,
+      "birth": {
+      "date": "1999-03-04",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "180 cm",
+      "weight": "70 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/56433.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-2.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 28,
+      "lineups": 21,
+      "minutes": 1819,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.750000",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 7,
+      "out": 6,
+      "bench": 15
+      },
+      "shots": {
+      "total": 13,
+      "on": 8
+      },
+      "goals": {
+      "total": 4,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 774,
+      "key": 20,
+      "accuracy": 23
+      },
+      "tackles": {
+      "total": 35,
+      "blocks": 6,
+      "interceptions": 22
+      },
+      "duels": {
+      "total": 179,
+      "won": 91
+      },
+      "dribbles": {
+      "attempts": 58,
+      "success": 23,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 25,
+      "committed": 16
+      },
+      "cards": {
+      "yellow": 4,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 56643,
+      "name": "A. Fiordaliso",
+      "firstname": "Alessandro",
+      "lastname": "Fiordaliso",
+      "age": 24,
+      "birth": {
+      "date": "1999-03-20",
+      "place": "Torino",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "184 cm",
+      "weight": "73 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/56643.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-3.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 15,
+      "lineups": 3,
+      "minutes": 450,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.486666",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 12,
+      "out": 2,
+      "bench": 31
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 261,
+      "key": 3,
+      "accuracy": 14
+      },
+      "tackles": {
+      "total": 8,
+      "blocks": 1,
+      "interceptions": 4
+      },
+      "duels": {
+      "total": 48,
+      "won": 23
+      },
+      "dribbles": {
+      "attempts": 3,
+      "success": 2,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 3,
+      "committed": 5
+      },
+      "cards": {
+      "yellow": 2,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 196843,
+      "name": "C. Dalle Mura",
+      "firstname": "Christian",
+      "lastname": "Dalle Mura",
+      "age": 21,
+      "birth": {
+      "date": "2002-02-02",
+      "place": "Pietrasanta",
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": "185 cm",
+      "weight": "70 kg",
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/196843.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-1.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-1.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 27,
+      "lineups": 19,
+      "minutes": 1827,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.885185",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 8,
+      "out": 9,
+      "bench": 16
+      },
+      "shots": {
+      "total": 5,
+      "on": 3
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": 1,
+      "saves": null
+      },
+      "passes": {
+      "total": 1242,
+      "key": 11,
+      "accuracy": 39
+      },
+      "tackles": {
+      "total": 29,
+      "blocks": 14,
+      "interceptions": 42
+      },
+      "duels": {
+      "total": 123,
+      "won": 64
+      },
+      "dribbles": {
+      "attempts": 3,
+      "success": 2,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 4,
+      "committed": 16
+      },
+      "cards": {
+      "yellow": 7,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 282031,
+      "name": "A. Boccia",
+      "firstname": "Alessandro",
+      "lastname": "Boccia",
+      "age": 19,
+      "birth": {
+      "date": "2004-06-30",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/282031.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-1.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Midfielder",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      },
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-3.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 137,
+      "name": "Coppa Italia",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/137.png",
+      "flag": "https://media-1.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Midfielder",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 310576,
+      "name": "P. Peda",
+      "firstname": "Patryk",
+      "lastname": "Peda",
+      "age": 21,
+      "birth": {
+      "date": "2002-04-16",
+      "place": null,
+      "country": "Poland"
+      },
+      "nationality": "Poland",
+      "height": "190 cm",
+      "weight": "76 kg",
+      "injured": false,
+      "photo": "https://media-1.api-sports.io/football/players/310576.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-2.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 21,
+      "lineups": 16,
+      "minutes": 1439,
+      "number": null,
+      "position": "Defender",
+      "rating": "6.842857",
+      "captain": false
+      },
+      "substitutes": {
+      "in": 5,
+      "out": 4,
+      "bench": 20
+      },
+      "shots": {
+      "total": 6,
+      "on": 3
+      },
+      "goals": {
+      "total": 1,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": 1014,
+      "key": 2,
+      "accuracy": 40
+      },
+      "tackles": {
+      "total": 35,
+      "blocks": 15,
+      "interceptions": 36
+      },
+      "duels": {
+      "total": 152,
+      "won": 88
+      },
+      "dribbles": {
+      "attempts": 12,
+      "success": 8,
+      "past": null
+      },
+      "fouls": {
+      "drawn": 14,
+      "committed": 20
+      },
+      "cards": {
+      "yellow": 3,
+      "yellowred": 1,
+      "red": 1
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 343560,
+      "name": "F. Saiani",
+      "firstname": "Filippo",
+      "lastname": "Saiani",
+      "age": 18,
+      "birth": {
+      "date": "2005-02-16",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/343560.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-1.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Defender",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 2
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": 0,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": 0,
+      "missed": 0,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 350102,
+      "name": "L. Martelli",
+      "firstname": "Luca",
+      "lastname": "Martelli",
+      "age": 18,
+      "birth": {
+      "date": "2005-04-25",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/350102.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-3.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-3.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-3.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      },
+      {
+      "player": {
+      "id": 359819,
+      "name": "L. Abati",
+      "firstname": "Lorenzo",
+      "lastname": "Abati",
+      "age": 19,
+      "birth": {
+      "date": "2004-04-07",
+      "place": null,
+      "country": "Italy"
+      },
+      "nationality": "Italy",
+      "height": null,
+      "weight": null,
+      "injured": false,
+      "photo": "https://media-2.api-sports.io/football/players/359819.png"
+      },
+      "statistics": [
+      {
+      "team": {
+      "id": 493,
+      "name": "Spal",
+      "logo": "https://media-2.api-sports.io/football/teams/493.png"
+      },
+      "league": {
+      "id": 136,
+      "name": "Serie B",
+      "country": "Italy",
+      "logo": "https://media-2.api-sports.io/football/leagues/136.png",
+      "flag": "https://media-2.api-sports.io/flags/it.svg",
+      "season": 2022
+      },
+      "games": {
+      "appearences": 0,
+      "lineups": 0,
+      "minutes": 0,
+      "number": null,
+      "position": "Goalkeeper",
+      "rating": null,
+      "captain": false
+      },
+      "substitutes": {
+      "in": 0,
+      "out": 0,
+      "bench": 0
+      },
+      "shots": {
+      "total": null,
+      "on": null
+      },
+      "goals": {
+      "total": 0,
+      "conceded": null,
+      "assists": null,
+      "saves": null
+      },
+      "passes": {
+      "total": null,
+      "key": null,
+      "accuracy": null
+      },
+      "tackles": {
+      "total": null,
+      "blocks": null,
+      "interceptions": null
+      },
+      "duels": {
+      "total": null,
+      "won": null
+      },
+      "dribbles": {
+      "attempts": null,
+      "success": null,
+      "past": null
+      },
+      "fouls": {
+      "drawn": null,
+      "committed": null
+      },
+      "cards": {
+      "yellow": 0,
+      "yellowred": 0,
+      "red": 0
+      },
+      "penalty": {
+      "won": null,
+      "commited": null,
+      "scored": null,
+      "missed": null,
+      "saved": null
+      }
+      }
+      ]
+      }
+      ]
     }
+
     ]
 
 }
