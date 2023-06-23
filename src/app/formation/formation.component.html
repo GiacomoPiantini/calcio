@@ -16,7 +16,7 @@
 
 <div class="cards-body">
   <div *ngIf="isLoading; else content">
-    <mat-progress-spinner color="primary" mode="indeterminate" class="loader"></mat-progress-spinner>
+    <mat-progress-bar mode="indeterminate" class="loader"></mat-progress-bar>
   </div>
   <ng-template #content>
 <div *ngFor="let player of formation">
@@ -27,15 +27,15 @@
     </mat-card-header>
     <img class="player-image" mat-card-image src="{{ player?.photo }}">
     <mat-card-content class="player-content">
-      <p>
+      <div>
         Age: {{ player.age }}
-      </p>
-      <p>
+      </div>
+      <div>
         Nationality: {{ player.nationality }}
-      </p>
-      <p>
+      </div>
+      <div>
         Height: {{ player.height }} {{ player.weight }}
-      </p>
+      </div>
     </mat-card-content>
     </mat-card>
 </div>

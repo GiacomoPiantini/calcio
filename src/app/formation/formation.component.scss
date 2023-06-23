@@ -12,8 +12,8 @@
 }
 
 .player-card {
-  width: 14rem;
-  height: 26rem;
+  width: 12rem;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +30,11 @@
   text-align: center;
 }
 
+.card-title {
+  font-size: 1rem;
+  line-height: 1;
+}
+
 .player-image {
   padding: 10px;
   border-radius: 20px;
@@ -41,4 +46,5 @@
 
 .loader {
   margin: 1rem;
+  width: 100vw;
 }

@@ -27,7 +27,7 @@ export class FormationComponent {
     this.isLoading = true;
     console.log(this.currentId)
     this.teamsService.getFormation(this.currentId)
-    .pipe(delay(2000))
+    .pipe(delay(500))
     .subscribe(
       (res: any) => {
       const playersData: any[] = res[0].response;
