@@ -19,13 +19,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
+  margin: 3rem;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+  margin-bottom: .35rem;
 }
 
 .player-card:hover {
   cursor: pointer;
   transform: scale(1.05);
   transition: all .5s;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
 }
 
 .card-title, .card-subtitle {

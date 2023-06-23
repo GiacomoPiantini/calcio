@@ -16,7 +16,7 @@
 
 <div class="cards-body">
   <div *ngIf="isLoading; else content">
-    <mat-progress-bar mode="indeterminate" class="loader"></mat-progress-bar>
+    <mat-spinner class="loader"></mat-spinner>
   </div>
   <ng-template #content>
 <div *ngFor="let player of formation">
