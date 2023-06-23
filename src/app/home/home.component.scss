@@ -12,11 +12,12 @@
 .selectStyle{
   margin: 10%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .buttonStyle{
   margin-left: 10px;
   vertical-align: text-bottom;
   justify-content: center;
+  margin-top: 10px
 }
