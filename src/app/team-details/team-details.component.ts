@@ -12,6 +12,7 @@ export class TeamDetailsComponent implements OnChanges{
 
 
   @Input('currentIdTeam') currentIdTeam?: any; //prendiamo in imput dal componente home l'id della squadra
+  @Input('currentTeamAddress') currentTeamAddress?: any;
 
   teamDetails: Team | undefined;
 

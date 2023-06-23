@@ -16,6 +16,7 @@ export class HomeComponent {
   teams: Team[] = [];
   stadiumTeam: Venue[] = [];
   teamId?: number;
+  teamVenueAddress?: string;
 
   constructor(
     private teamsService: TeamsService,){this.getNamesTeams();}
@@ -50,9 +51,11 @@ export class HomeComponent {
   }
 
   teamDetails() {
-    const selectedTeam = this.teamsControl.value?.team; //prendo l'id del team per poter poi prendere i dettagli e mandarlo ai componente dei dettagli
+    const selectedTeam = this.teamsControl.value?.team;
+    const selectedVenue = this.teamsControl.value?.venue //prendo l'id del team per poter poi prendere i dettagli e mandarlo ai componente dei dettagli
     if (selectedTeam) {
-      this.teamId = selectedTeam.id; //assegno l'id a questa variabile che poi passo al template
+      this.teamId = selectedTeam.id;
+      this.teamVenueAddress = selectedVenue.address //assegno l'id a questa variabile che poi passo al template
     }
   }
 

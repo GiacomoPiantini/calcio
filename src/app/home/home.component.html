@@ -25,10 +25,10 @@
       <mat-error *ngIf="teamsControl.hasError('required')">Scegli squadra</mat-error>
     </mat-form-field>
 
-    <button mat-raised-button color="primary" (click)="teamDetails()" [routerLink]="['/home']" class="buttonStyle">Cerca</button>
+    <button mat-raised-button color="primary" (click)="teamDetails()" class="buttonStyle">Seleziona</button>
   </form>
 </div>
 <!------------->
 
 
-<app-team-details *ngIf="teamId" [currentIdTeam]="teamId"></app-team-details> <!--premndo l'id da questo componente e lo passo al componente dei dettagli-->
+<app-team-details *ngIf="teamId" [currentIdTeam]="teamId" [currentTeamAddress]="teamVenueAddress"></app-team-details> <!--premndo l'id da questo componente e lo passo al componente dei dettagli-->
