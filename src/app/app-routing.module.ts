@@ -18,10 +18,10 @@ const routes: Routes = [
     path: 'formation/:id',
     component: FormationComponent,
   },
-/*   {
+  {
     path: 'player/:id',
     component: PlayerComponent,
-  }, */
+  },
   { path: '**', redirectTo: '/contacts', pathMatch: 'full' },
 ];
 
