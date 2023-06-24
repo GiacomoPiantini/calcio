@@ -11,7 +11,7 @@ import { FormControl, Validators } from '@angular/forms';
 export class HomeComponent {
 
   teamsControl = new FormControl<Responce | null >(null, Validators.required)
-  selectFormControl = new FormControl("", Validators.required)
+  // selectFormControl = new FormControl("", Validators.required)
   teamsData: Responce[]=[]
   teams: Team[] = [];
   stadiumTeam: Venue[] = [];
@@ -51,11 +51,11 @@ export class HomeComponent {
   }
 
   teamDetails() {
-    const selectedTeam = this.teamsControl.value?.team;
-    const selectedVenue = this.teamsControl.value?.venue //prendo l'id del team per poter poi prendere i dettagli e mandarlo ai componente dei dettagli
+    const selectedTeam = this.teamsControl.value?.team; //prendo l'id del team per poter poi prendere i dettagli e mandarlo ai componente dei dettagli
+    const selectedVenue = this.teamsControl.value?.venue;
     if (selectedTeam) {
-      this.teamId = selectedTeam.id;
-      this.teamVenueAddress = selectedVenue.address //assegno l'id a questa variabile che poi passo al template
+      this.teamId = selectedTeam.id; //assegno l'id a questa variabile che poi passo al template
+      this.teamVenueAddress = selectedVenue.address
     }
   }
 
