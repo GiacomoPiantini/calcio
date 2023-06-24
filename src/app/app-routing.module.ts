@@ -5,7 +5,7 @@ import { PlayerComponent } from './player/player.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-    {
+  {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full',
@@ -22,11 +22,11 @@ const routes: Routes = [
     path: 'player/:id',
     component: PlayerComponent,
   },
-  { path: '**', redirectTo: '/contacts', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
